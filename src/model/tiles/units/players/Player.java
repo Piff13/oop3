@@ -5,6 +5,9 @@ import model.tiles.units.Unit;
 import model.tiles.units.enemies.Enemy;
 import model.utils.Position;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public abstract class Player extends Unit {
     public static final char PLAYER_TILE = '@';
     protected static final int LEVEL_REQUIREMENT = 50;
@@ -85,5 +88,13 @@ public abstract class Player extends Unit {
     }
     public void onDeath(Player p){
         return;//no friendly fire
+    }
+    public List<Enemy> getPotentialTargets(int range){
+        List<Enemy> result = new LinkedList<Enemy>();
+        for(Enemy enemy: board.getEnemies()){
+            if(position.range(enemy.getPosition()) < range)
+                result.add(enemy);
+        }
+        return result;
     }
 }

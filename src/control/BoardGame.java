@@ -4,6 +4,7 @@ import model.tiles.Empty;
 import model.tiles.Tile;
 import model.tiles.units.Unit;
 import model.tiles.units.enemies.Enemy;
+import model.tiles.units.players.Player;
 import model.utils.Position;
 
 import java.awt.*;
@@ -14,6 +15,7 @@ import java.util.List;
 public class BoardGame {
     public TreeMap<Position,Tile> tiles;
     public List<Enemy> enemies;
+    public Player player;
 
     public Tile getTile(Position p)
     {

@@ -40,18 +40,11 @@ public class warrior extends  Player {
         }
     }
     public void hitEnemyInRange(){
-        List<Enemy> potentialTargets = getPotentialTargets();
+        List<Enemy> potentialTargets = getPotentialTargets(3);
         hitRandomTarget(potentialTargets);
     }
 
-    public List<Enemy> getPotentialTargets(){
-        List<Enemy> result = new LinkedList<Enemy>();
-        for(Enemy enemy: board.getEnemies()){
-            if(position.range(enemy.getPosition()) < 3)
-                result.add(enemy);
-        }
-        return result;
-    }
+
     public void hitRandomTarget(List<Enemy> potentialTargets){
         Random rand = new Random();
         int generate = rand.nextInt(0, potentialTargets.size());

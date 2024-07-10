@@ -69,6 +69,7 @@ public abstract class Unit extends Tile {
     public void visit(Wall w){
         // Do nothing
     }
+
     public abstract void visit(Player p);
     public abstract void visit(Enemy e);
     public void onDeath(Unit uni){
