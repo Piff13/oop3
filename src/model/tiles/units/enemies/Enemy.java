@@ -1,0 +1,47 @@
+package model.tiles.units.enemies;
+
+import control.BoardGame;
+import model.tiles.units.Unit;
+import model.tiles.units.players.Player;
+
+public abstract class Enemy extends Unit {
+    protected int experienceValue;
+
+    public Enemy(char tile, String name, int hitPoints, int attack, int defense, int experienceValue, BoardGame board) {
+        super(tile, name, hitPoints, attack, defense,board);
+        this.experienceValue = experienceValue;
+    }
+
+    public int experienceValue() {
+        return experienceValue;
+    }
+
+
+    @Override
+    public void accept(Unit unit) {
+        unit.visit(this);
+    }
+
+    public void visit(Enemy e){
+        // Do nothing
+    }
+
+    public void visit(Player p) {
+        battle(p);
+        if (!p.alive()){
+            p.onDeath(this);
+        }
+    }
+    public void kill(Unit unit){
+        unit.onDeath(this);
+    }
+    public void onDeath(Player p){
+        p.addExperience(experienceValue);
+        board.removeEnemy(this);
+
+    }
+    public void onDeath(Enemy e){
+        return;//no friendly fire
+    }
+
+}
