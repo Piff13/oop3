@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Trap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" afterDir="false" />
-    </list>
+    <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="generalize functions, add trap and mage" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,6 +69,15 @@
       <updated>1720619637585</updated>
       <workItem from="1720640622105" duration="2539000" />
     </task>
+    <task id="LOCAL-00001" summary="generalize functions, add trap and mage">
+      <option name="closed" value="true" />
+      <created>1720657040957</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720657040957</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,5 +105,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="generalize functions, add trap and mage" />
+    <option name="LAST_COMMIT_MESSAGE" value="generalize functions, add trap and mage" />
   </component>
 </project>
