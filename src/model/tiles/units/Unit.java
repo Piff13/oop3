@@ -35,6 +35,11 @@ public abstract class Unit extends Tile {
     public int attack(){
         return generator.generate(attack);
     }
+    public void attackOther(Unit target,int damage){
+        int defense = target.defend();
+        target.takeDamage(damage - defense,this);
+
+    }
 
     public int defend(){
         return generator.generate(defense);
@@ -44,16 +49,14 @@ public abstract class Unit extends Tile {
         return health.getCurrent() > 0;
     }
 
-    public int takeDamage(int damage){
+    public int takeDamage(int damage, Unit dealer){
         int life=health.takeDamage(damage);
+        dealer.kill(this);
         return life;
     }
-    public void battle(Unit enemy) {
-        int attack = this.attack();
-        int defense = enemy.defend();
-        int damageTaken = enemy.takeDamage(attack - defense);
+    public void combatBattle(Unit enemy) {
+        attackOther(enemy,attack());
         if(!enemy.alive()){
-            kill(enemy);
             this.swapPosition(enemy);
         }
 
@@ -84,7 +87,10 @@ public abstract class Unit extends Tile {
         Tile tile= board.getTile(updatedPosition);
         interact(tile);
     }
-    public abstract void SpecialAbility();
+    //TODO: move to heroic unit to abstract
+    public void SpecialAbility(){
+        return;
+    }
 
 
 

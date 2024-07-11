@@ -27,7 +27,7 @@ public abstract class Enemy extends Unit {
     }
 
     public void visit(Player p) {
-        battle(p);
+        combatBattle(p);
         if (!p.alive()){
             p.onDeath(this);
         }

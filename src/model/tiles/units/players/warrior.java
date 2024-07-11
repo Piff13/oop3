@@ -41,22 +41,17 @@ public class warrior extends  Player {
     }
     public void hitEnemyInRange(){
         List<Enemy> potentialTargets = getPotentialTargets(3);
-        hitRandomTarget(potentialTargets);
+        hitRandomTarget(potentialTargets, health.getCurrent() / 10);
     }
-
-
-    public void hitRandomTarget(List<Enemy> potentialTargets){
+    public void hitRandomTarget(List<Enemy> potentialTargets,int damage){
         Random rand = new Random();
         int generate = rand.nextInt(0, potentialTargets.size());
         Enemy target = potentialTargets.get(generate);
         if(target != null) {
-            target.takeDamage(health.getCurrent());
-            if(!target.alive()){
-                target.onDeath(this);
-
-            }
+            target.takeDamage(damage,this);
         }
     }
+
     public void levelup(){
         super.levelUp();
         reamainingCooldown = 0;

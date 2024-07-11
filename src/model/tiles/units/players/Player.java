@@ -7,6 +7,7 @@ import model.utils.Position;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public abstract class Player extends Unit {
     public static final char PLAYER_TILE = '@';
@@ -70,7 +71,7 @@ public abstract class Player extends Unit {
     }
 
     public void visit(Enemy e){
-        battle(e);
+        combatBattle(e);
         if(!e.alive()){
             addExperience(e.experienceValue());
             e.onDeath(this);

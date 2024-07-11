@@ -42,16 +42,16 @@ public class Rogue extends Player{
     }
     public void hitEnemyInRange(){
         List<Enemy> potentialTargets = getPotentialTargets(2);
-        hitRandomTarget(potentialTargets);
+        hitTargets(potentialTargets);
     }
 
 
-    public void hitRandomTarget(List<Enemy> potentialTargets){
+    public void hitTargets(List<Enemy> potentialTargets){
         for (Enemy enemy : potentialTargets) {
             int defence= enemy.defend();
             int reduce=attack-defence;
             int minReduce=Math.min(reduce,0);
-            enemy.takeDamage(minReduce);
+            enemy.takeDamage(minReduce,this);
         }
     }
 }
