@@ -14,6 +14,7 @@ public class Rogue extends Player{
     protected final int cost;
     protected  int energy;
     protected final int BONUS_ATTACK_WARRIOR = 3;
+    protected  final  int MAX_ENENERGY =100;
 
     public Rogue(String name, int hitPoints, int attack, int defense, BoardGame board, int cost) {
         super(name, hitPoints, attack, defense, board);
@@ -25,7 +26,7 @@ public class Rogue extends Player{
     }
     public void levelup(){
         super.levelUp();
-        energy = 100;
+        energy = MAX_ENENERGY;
     }
 
 
@@ -40,6 +41,13 @@ public class Rogue extends Player{
             hitEnemyInRange();
         }
     }
+
+
+
+    public void updateDelay() {
+        energy = Math.min(energy + 10, MAX_ENENERGY);
+    }
+
     public void hitEnemyInRange(){
         List<Enemy> potentialTargets = getPotentialTargets(2);
         hitTargets(potentialTargets);
