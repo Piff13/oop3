@@ -45,6 +45,14 @@ public class Mage extends Player{
             currentMana -= MANA_COST;
         }
     }
+
+
+
+    public void updateDelay() {
+        currentMana = Math.min(currentMana + level, manaPool);
+    }
+
+
     public void tryToHitRandomTargets(List<Enemy> potentialTargets,int damage){
         Random rand = new Random();
         int generate = rand.nextInt(0, potentialTargets.size());

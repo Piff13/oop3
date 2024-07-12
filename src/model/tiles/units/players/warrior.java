@@ -39,6 +39,14 @@ public class warrior extends  Player {
             hitEnemyInRange();
         }
     }
+
+
+
+    @Override
+    public void updateDelay() {
+        reamainingCooldown = Math.min(reamainingCooldown - 1, 0);
+    }
+
     public void hitEnemyInRange(){
         List<Enemy> potentialTargets = getPotentialTargets(3);
         hitRandomTarget(potentialTargets, health.getCurrent() / 10);

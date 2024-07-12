@@ -1,8 +1,10 @@
 package model.tiles.units.enemies;
 
 import control.BoardGame;
+import model.tiles.Empty;
 import model.tiles.units.Unit;
 import model.tiles.units.players.Player;
+import model.utils.Position;
 
 public abstract class Enemy extends Unit {
     protected int experienceValue;
@@ -37,8 +39,8 @@ public abstract class Enemy extends Unit {
     }
     public void onDeath(Player p){
         p.addExperience(experienceValue);
+        board.addEmpty(position);
         board.removeEnemy(this);
-
     }
     public void onDeath(Enemy e){
         return;//no friendly fire
