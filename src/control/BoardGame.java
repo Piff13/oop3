@@ -20,6 +20,10 @@ public class BoardGame {
     public Player player;
     public MessageCallback callBack;
 
+    public BoardGame() {
+
+    }
+
     public Tile getTile(Position p)
     {
         return tiles.get(p);
