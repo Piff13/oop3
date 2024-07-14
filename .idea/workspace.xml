@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="generalize functions, add trap and mage">
-      <change afterPath="$PROJECT_DIR$/src/Ui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ui/BoardView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/tiles/units/Characters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/BoardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Monster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Trap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Trap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,21 +41,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "view",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CHARCTERS&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -83,6 +73,9 @@
       <option name="presentableId" value="Default" />
       <updated>1720619637585</updated>
       <workItem from="1720640622105" duration="2539000" />
+      <workItem from="1720945243657" duration="692000" />
+      <workItem from="1720962755700" duration="679000" />
+      <workItem from="1720979703152" duration="1618000" />
     </task>
     <task id="LOCAL-00001" summary="generalize functions, add trap and mage">
       <option name="closed" value="true" />
