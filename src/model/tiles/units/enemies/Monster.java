@@ -12,7 +12,7 @@ public class Monster extends Enemy {
         super(tile, name, hitPoints, attack, defense, experienceValue, board);
         this.vision = vision;
     }
-    public void move(){
+    public void OnTick(){
         Player p=board.player;
         Position pos= p.getPosition();
         if (pos.range(position)<vision){
@@ -53,7 +53,6 @@ public class Monster extends Enemy {
                 move(position.getX()-1,position.getY());
             }
         }
-
     }
 
 
@@ -61,4 +60,6 @@ public class Monster extends Enemy {
     public void SpecialAbility() {
 
     }
+
+
 }

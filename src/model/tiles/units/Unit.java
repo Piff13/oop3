@@ -88,9 +88,8 @@ public abstract class Unit extends Tile {
         interact(tile);
     }
     //TODO: move to heroic unit to abstract
-    public void SpecialAbility(){
-        return;
-    }
+    public abstract void SpecialAbility();
+    public abstract void OnTick();
 
 
 

@@ -98,4 +98,14 @@ public abstract class Player extends Unit {
         }
         return result;
     }
+
+    public void OnTick(){
+        updateDelay();
+    }
+    public abstract void updateDelay();
+
+    public void SpecialAbility(){
+        return;
+    }
+
 }
