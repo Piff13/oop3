@@ -8,9 +8,11 @@ import model.tiles.units.enemies.Enemy;
 import model.tiles.units.players.Player;
 import model.utils.Health;
 import model.utils.Position;
+import model.utils.callbacks.MessageCallback;
 import model.utils.generators.Generator;
 
 public abstract class Unit extends Tile {
+    protected MessageCallback callBack;
     protected String name;
     protected Health health;
     protected int attack;
@@ -18,13 +20,14 @@ public abstract class Unit extends Tile {
     protected BoardGame board;
     protected Generator generator;
 
-    public Unit(char tile, String name, int hitPoints, int attack, int defense,BoardGame board) {
+    public Unit(char tile, String name, int hitPoints, int attack, int defense,BoardGame board,MessageCallback callBack) {
         super(tile);
         this.name = name;
         this.health = new Health(hitPoints);
         this.attack = attack;
         this.defense = defense;
         this.board= board;
+        this.callBack = callBack;
     }
 
     public void initialize(Position p, Generator generator){
@@ -37,7 +40,9 @@ public abstract class Unit extends Tile {
     }
     public void attackOther(Unit target,int damage){
         int defense = target.defend();
-        target.takeDamage(damage - defense,this);
+        callBack.send(this.toString() + "attacked with" + damage + " damage" + target.toString());
+        callBack.send(target.toString() + "rolled" + defense + " defense");
+        target.takeDamage(Math.max(damage - defense, 0),this);
 
     }
 
@@ -51,7 +56,9 @@ public abstract class Unit extends Tile {
 
     public int takeDamage(int damage, Unit dealer){
         int life=health.takeDamage(damage);
-        dealer.kill(this);
+        callBack.send(this.toString() + "took " + damage + " damage");
+        if(!alive())
+            dealer.kill(this);
         return life;
     }
     public void combatBattle(Unit enemy) {
@@ -90,8 +97,9 @@ public abstract class Unit extends Tile {
     //TODO: move to heroic unit to abstract
     public abstract void SpecialAbility();
     public abstract void OnTick();
-
-
+    public String toString(){
+        return "name: " + name + " ,hp: " + health + " ,attack: " + attack + " ,defense: " + defense;
+    }
 
 
 }

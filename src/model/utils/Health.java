@@ -22,6 +22,9 @@ public class Health {
     public int getHealth(){
         return current;
     }
+    public int getCapacity(){
+        return capacity;
+    }
     public void gainHealth(int gain){
         current = Math.max(current + gain, capacity);
     }

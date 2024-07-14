@@ -2,6 +2,7 @@ package model.tiles.units.players;
 
 import control.BoardGame;
 import model.tiles.units.enemies.Enemy;
+import model.utils.callbacks.MessageCallback;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,8 +14,8 @@ public class warrior extends  Player {
     protected final int BONUS_ATTACK_WARRIOR = 2;
     protected final int WARRIOR_COOLDOWN;
     protected int reamainingCooldown ;
-    public warrior(String name, int hitPoints, int attack, int defense, BoardGame board, int cooldown) {
-        super(name, hitPoints, attack, defense, board);
+    public warrior(String name, int hitPoints, int attack, int defense, int cooldown, BoardGame board, MessageCallback callback) {
+        super(name, hitPoints, attack, defense, board, callback);
         this.reamainingCooldown=0;
         this.WARRIOR_COOLDOWN = cooldown;
     }
@@ -32,7 +33,7 @@ public class warrior extends  Player {
     @Override
     public void SpecialAbility() {
         if(reamainingCooldown > 0){
-            //TODO: Error message
+            callBack.send("trying to use special ability too soon");
         } else {
             health.gainHealth(defense * 10);
             reamainingCooldown = WARRIOR_COOLDOWN;

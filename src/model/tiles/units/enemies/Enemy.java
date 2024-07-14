@@ -5,12 +5,13 @@ import model.tiles.Empty;
 import model.tiles.units.Unit;
 import model.tiles.units.players.Player;
 import model.utils.Position;
+import model.utils.callbacks.MessageCallback;
 
 public abstract class Enemy extends Unit {
     protected int experienceValue;
 
-    public Enemy(char tile, String name, int hitPoints, int attack, int defense, int experienceValue, BoardGame board) {
-        super(tile, name, hitPoints, attack, defense,board);
+    public Enemy(char tile, String name, int hitPoints, int attack, int defense, int experienceValue, BoardGame board, MessageCallback callback) {
+        super(tile, name, hitPoints, attack, defense,board, callback);
         this.experienceValue = experienceValue;
     }
 
@@ -41,6 +42,7 @@ public abstract class Enemy extends Unit {
         p.addExperience(experienceValue);
         board.addEmpty(position);
         board.removeEnemy(this);
+        callBack.send(this.toString() + "has died, xp gained is:" + experienceValue);
     }
     public void onDeath(Enemy e){
         return;//no friendly fire

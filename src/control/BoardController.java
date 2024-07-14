@@ -15,8 +15,10 @@ public class BoardController {
         index = 0;
     }
     public void GameStart(){
+
         while (index<3 && currentPlayer.alive()){
             BoardGame board= boardGames[index];
+            board.PlayGame();
             index++;
         }
     }

@@ -4,6 +4,7 @@ import control.BoardGame;
 import model.tiles.units.Unit;
 import model.tiles.units.enemies.Enemy;
 import model.utils.Position;
+import model.utils.callbacks.MessageCallback;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -15,12 +16,12 @@ public abstract class Player extends Unit {
     protected static final int HEALTH_GAIN = 10;
     protected static final int ATTACK_GAIN = 4;
     protected static final int DEFENSE_GAIN = 1;
-
+    protected BoardGame board;
     protected int level;
     protected int experience;
 
-    public Player(String name, int hitPoints, int attack, int defense, BoardGame board) {
-        super(PLAYER_TILE, name, hitPoints, attack, defense,board);
+    public Player(String name, int hitPoints, int attack, int defense, BoardGame board, MessageCallback callback) {
+        super(PLAYER_TILE, name, hitPoints, attack, defense,board, callback);
         this.level = 1;
         this.experience = 0;
     }
@@ -42,6 +43,12 @@ public abstract class Player extends Unit {
         health.heal();
         attack += attackGain;
         defense += defenseGain;
+        callBack.send("you leveled up!" + printLevelUpStats());
+    }
+    protected String printLevelUpStats(){
+        String str = "new level is: " + level + " you gained: " + healthGain() + " hp, ";
+        str += attackGain() + " attack, " + defenseGain() + " defense";
+        return str;
     }
 
     protected int levelRequirement(){
@@ -84,7 +91,7 @@ public abstract class Player extends Unit {
     @Override
     public void onDeath(Enemy e) {
         this.setTile('X');
-        //TODO: stop game
+        callBack.send("you died");
 
     }
     public void onDeath(Player p){
@@ -104,8 +111,9 @@ public abstract class Player extends Unit {
     }
     public abstract void updateDelay();
 
-    public void SpecialAbility(){
-        return;
+    public String toString(){
+        return super.toString() + " ,level: " + level + " ,xp: " + experience;
     }
+
 
 }

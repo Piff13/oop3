@@ -2,6 +2,7 @@ package model.tiles.units.players;
 
 import control.BoardGame;
 import model.tiles.units.enemies.Enemy;
+import model.utils.callbacks.MessageCallback;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -12,12 +13,12 @@ import static java.lang.System.in;
 public class Rogue extends Player{
 
     protected final int cost;
-    protected  int energy;
+    protected int energy;
     protected final int BONUS_ATTACK_WARRIOR = 3;
     protected  final  int MAX_ENENERGY =100;
 
-    public Rogue(String name, int hitPoints, int attack, int defense, BoardGame board, int cost) {
-        super(name, hitPoints, attack, defense, board);
+    public Rogue(String name, int hitPoints, int attack, int defense, BoardGame board, int cost, MessageCallback callback) {
+        super(name, hitPoints, attack, defense, board, callback);
         this.cost = cost;
         this.energy=100;
     }
@@ -30,12 +31,10 @@ public class Rogue extends Player{
     }
 
 
-
-
     @Override
     public void SpecialAbility() {
         if(energy-cost < 0){
-            //TODO: Error message
+            callBack.send("trying to use special ability too soon");
         } else {
             energy -= cost;
             hitEnemyInRange();
@@ -56,10 +55,8 @@ public class Rogue extends Player{
 
     public void hitTargets(List<Enemy> potentialTargets){
         for (Enemy enemy : potentialTargets) {
-            int defence= enemy.defend();
-            int reduce=attack-defence;
-            int minReduce=Math.min(reduce,0);
-            enemy.takeDamage(minReduce,this);
+            attackOther(enemy, attack);
         }
     }
+
 }

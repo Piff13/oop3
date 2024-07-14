@@ -7,6 +7,7 @@ import model.tiles.units.Unit;
 import model.tiles.units.enemies.Enemy;
 import model.tiles.units.players.Player;
 import model.utils.Position;
+import model.utils.callbacks.MessageCallback;
 
 import java.awt.*;
 import java.sql.ClientInfoStatus;
@@ -17,14 +18,16 @@ public class BoardGame {
     public TreeMap<Position,Tile> tiles;
     public List<Enemy> enemies;
     public Player player;
+    public MessageCallback callBack;
 
     public Tile getTile(Position p)
     {
         return tiles.get(p);
     }
-    public  BoardGame(TreeMap<Position,Tile> tiles, List<Enemy> enemies){
+    public  BoardGame(TreeMap<Position,Tile> tiles, List<Enemy> enemies, MessageCallback callback){
        this.tiles= tiles;
        this.enemies = enemies;
+       this.callBack = callback;
     }
     public List<Enemy> getEnemies (){
         return enemies;
@@ -45,9 +48,11 @@ public class BoardGame {
         while(player.alive() && !IsAllDeath()){
             char act= sc.next().charAt(0);
             chooseAct(act);
-            for(Enemy enemy : enemies){
-                enemy.OnTick();
+            Iterator<Enemy> iter = enemies.iterator();
+            while(player.alive() && iter.hasNext()){
+                iter.next().OnTick();
             }
+            callBack.send(player.toString());
             BoardView board = new BoardView(tiles);
             board.printBoard();
         }
@@ -56,24 +61,35 @@ public class BoardGame {
         Position p =player.getPosition();
         int x= p.getX();
         int y= p.getY();
-        if(act == 'w'){
-            player.move(x,y+1);
+        boolean found = false;
+        while(!found){
+            if(act == 'w'){
+                player.move(x,y+1);
+                found = true;
+            }
+            if(act == 's'){
+                player.move(x,y-1);
+                found = true;
+            }
+            if(act == 'a'){
+                player.move(x-1,y);
+                found = true;
+            }
+            if(act == 'd'){
+                player.move(x+1,y);
+                found = true;
+            }
+            if(act == 'e'){
+                player.SpecialAbility();
+                found = true;
+            }
+            if(act == 'q'){
+                found = true;
+            } else{
+                callBack.send("illegal char");
+            }
         }
-        if(act == 's'){
-            player.move(x,y-1);
-        }
-        if(act == 'a'){
-            player.move(x-1,y);
-        }
-        if(act == 'd'){
-            player.move(x+1,y);
-        }
-        if(act == 'e'){
-            player.SpecialAbility();
-        }
-        if(act == 'q'){
-
-        }
+        player.OnTick();
     }
 
 }

@@ -3,13 +3,14 @@ package model.tiles.units.enemies;
 import control.BoardGame;
 import model.tiles.units.players.Player;
 import model.utils.Position;
+import model.utils.callbacks.MessageCallback;
 
 import java.util.Random;
 
 public class Monster extends Enemy {
-    protected final  int vision;
-    public Monster(char tile, String name, int hitPoints, int attack, int defense, int experienceValue, BoardGame board, int vision) {
-        super(tile, name, hitPoints, attack, defense, experienceValue, board);
+    protected final int vision;
+    public Monster(char tile, String name, int hitPoints, int attack, int defense, int experienceValue, int vision, BoardGame board, MessageCallback callback) {
+        super(tile, name, hitPoints, attack, defense, experienceValue,board, callback);
         this.vision = vision;
     }
     public void OnTick(){

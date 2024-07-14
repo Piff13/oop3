@@ -1,14 +1,15 @@
 package model.tiles.units.enemies;
 
 import control.BoardGame;
+import model.utils.callbacks.MessageCallback;
 
 public class Trap extends Enemy{
     final int VISIBILT_TIME;
     final int INVISIBILITY_TIME;
     int tickCount;
     boolean visible;
-    public Trap(int visibilityTime, int invisibilityTime,char title, String name, int hitPoints, int attack, int defense, int experienceValue, BoardGame board){
-        super(title, name, hitPoints, attack, defense, experienceValue, board);
+    public Trap(int visibilityTime, int invisibilityTime, char title, String name, int hitPoints, int attack, int defense, int experienceValue, BoardGame board, MessageCallback callback){
+        super(title, name, hitPoints, attack, defense, experienceValue,board, callback);
         VISIBILT_TIME = visibilityTime;
         INVISIBILITY_TIME = invisibilityTime;
         tickCount = 0;
