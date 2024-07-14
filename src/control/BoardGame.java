@@ -18,6 +18,10 @@ public class BoardGame {
     public List<Enemy> enemies;
     public Player player;
 
+    public BoardGame() {
+
+    }
+
     public Tile getTile(Position p)
     {
         return tiles.get(p);
