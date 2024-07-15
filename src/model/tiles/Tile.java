@@ -4,7 +4,7 @@ import model.tiles.units.Unit;
 import model.utils.Position;
 
 public abstract class Tile {
-    protected char tile;
+    public char tile;
     protected Position position;
 
     public Tile(char tile){
@@ -32,4 +32,7 @@ public abstract class Tile {
     }
 
     public abstract void accept(Unit unit);
+    public char view(){
+        return tile;
+    }
 }

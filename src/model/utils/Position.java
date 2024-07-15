@@ -1,6 +1,8 @@
 package model.utils;
 
-public class Position {
+import java.util.Objects;
+
+public class Position implements Comparable<Position>{
     private int x;
     private int y;
 
@@ -19,4 +21,30 @@ public class Position {
     public int getY(){
         return  y;
     }
+    @Override
+    public int compareTo(Position other) {
+        if (this.x != other.x) {
+            return Integer.compare(this.x, other.x);
+        } else {
+            return Integer.compare(this.y, other.y);
+        }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Position position = (Position) obj;
+        return x == position.x && y == position.y;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
+
 }

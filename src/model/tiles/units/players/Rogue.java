@@ -2,6 +2,7 @@ package model.tiles.units.players;
 
 import control.BoardGame;
 import model.tiles.units.enemies.Enemy;
+import model.utils.BoardHelper;
 import model.utils.callbacks.MessageCallback;
 
 import java.util.LinkedList;
@@ -17,8 +18,8 @@ public class Rogue extends Player{
     protected final int BONUS_ATTACK_WARRIOR = 3;
     protected  final  int MAX_ENENERGY =100;
 
-    public Rogue(String name, int hitPoints, int attack, int defense, BoardGame board, int cost, MessageCallback callback) {
-        super(name, hitPoints, attack, defense, board, callback);
+    public Rogue(String name, int hitPoints, int attack, int defense, int cost, BoardHelper boardHelper, MessageCallback callback) {
+        super(name, hitPoints, attack, defense, boardHelper, callback);
         this.cost = cost;
         this.energy=100;
     }

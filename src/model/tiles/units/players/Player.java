@@ -3,6 +3,7 @@ package model.tiles.units.players;
 import control.BoardGame;
 import model.tiles.units.Unit;
 import model.tiles.units.enemies.Enemy;
+import model.utils.BoardHelper;
 import model.utils.Position;
 import model.utils.callbacks.MessageCallback;
 
@@ -16,12 +17,11 @@ public abstract class Player extends Unit {
     protected static final int HEALTH_GAIN = 10;
     protected static final int ATTACK_GAIN = 4;
     protected static final int DEFENSE_GAIN = 1;
-    protected BoardGame board;
     protected int level;
     protected int experience;
 
-    public Player(String name, int hitPoints, int attack, int defense, BoardGame board, MessageCallback callback) {
-        super(PLAYER_TILE, name, hitPoints, attack, defense,board, callback);
+    public Player(String name, int hitPoints, int attack, int defense, BoardHelper boardHelper, MessageCallback callback) {
+        super(PLAYER_TILE, name, hitPoints, attack, defense, boardHelper, callback);
         this.level = 1;
         this.experience = 0;
     }
@@ -99,7 +99,7 @@ public abstract class Player extends Unit {
     }
     public List<Enemy> getPotentialTargets(int range){
         List<Enemy> result = new LinkedList<Enemy>();
-        for(Enemy enemy: board.getEnemies()){
+        for(Enemy enemy: boardHelper.getEnemies()){
             if(position.range(enemy.getPosition()) < range)
                 result.add(enemy);
         }

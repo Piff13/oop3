@@ -1,10 +1,12 @@
 package view;
 import control.BoardGame;
 import model.tiles.Tile;
+import model.tiles.units.Characters;
 import model.tiles.units.enemies.Enemy;
 import model.tiles.units.enemies.Monster;
 import model.tiles.units.enemies.Trap;
 import model.tiles.units.players.Player;
+import model.utils.BoardHelper;
 import model.utils.Position;
 import model.utils.callbacks.MessageCallback;
 import model.tiles.*;
@@ -17,37 +19,60 @@ import java.util.*;
 import static java.util.Map.entry;
 
 public class InputController {
-    private Map<Character, Monster> mapOfMonsters = Map.ofEntries(
-            entry('s',  ),
-            entry('k',  ),
-            entry('q',  ),
-            entry('z',  ),
-            entry('b',  ),
-            entry('g',  ),
-            entry('w',  ),
-            entry('M',  ),
-            entry('C',  ),
-            entry('K',  )
+    private MessageCallback messageCallback;
+    private BoardHelper boardHelper;
+    private Characters characterController;
+    private Map<Character, Monster> mapOfMonsters;
+    private Map<Character, Trap> mapOfTraps;
+    private Map<Integer, Player> mapOfPlayers;
+    public InputController(MessageCallback messageCallback, BoardHelper boardHelper){
+        this.messageCallback = messageCallback;
+        this.boardHelper = boardHelper;
+        characterController = new Characters(messageCallback, boardHelper);
+        this.initMaps();
+    }
+    private void initMaps(){
+        mapOfMonsters = Map.ofEntries(
+                entry('s',  characterController.Create_Lannister_Solider()),
+                entry('k',  characterController.Create_Lannister_Knight()),
+                entry('q',  characterController.Create_Queens_Guard()),
+                entry('z',  characterController.Create_Wright()),
+                entry('b',  characterController.Create_Bear_Wright()),
+                entry('g',  characterController.Create_Giant_Wright()),
+                entry('w',  characterController.Create_White_Walker()),
+                entry('M',  characterController.Create_The_Mountain()),
+                entry('C',  characterController.Create_Queen_Cersei()),
+                entry('K',  characterController.Create_Nights_King())
 
-    );
-    private Map<Character, Trap> mapOfTraps = Map.ofEntries(
-            entry('B',  ),
-            entry('Q',  ),
-            entry('D', )
+        );
 
-    );
-    private Map<Character, Player> mapOfPlayers = Map.ofEntries(
-            entry('D', )
-    );
-    public BoardGame CreateBoardFromFile(String filePath, MessageCallback callback, Player player, Generator generator){
+        mapOfTraps = Map.ofEntries(
+                entry('B',  characterController.Create_Bonus_Trap()),
+                entry('Q',  characterController.Create_Queens_Trap()),
+                entry('D', characterController.Create_Death_Trap())
+
+        );
+
+        mapOfPlayers = Map.ofEntries(
+                entry(1, characterController.Create_Jon_Snow()),
+                entry(2, characterController.Create_The_Hound()),
+                entry(3, characterController.Create_Melisandre()),
+                entry(4, characterController.Create_Thoros_of_Myr()),
+                entry(5, characterController.Create_Arya_Stark()),
+                entry(6, characterController.Create_Bronn())
+        );
+    }
+    public BoardGame CreateBoardFromFile(String filePath, Player player, Generator generator){
         TreeMap<Position,Tile> tiles = new TreeMap<>();
         List<Enemy> enemies = new LinkedList<Enemy>();
+        int y = 0;//will also help to determine board height
+        int width = 0;
         try {
             File myObj = new File(filePath);
             Scanner myReader = new Scanner(myObj);
-            int y = 0;
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
+                width = data.length();
                 for(int x = 0; x < data.length(); x++){
                     char currenctChar = data.charAt(x);
                     Tile currentTile;
@@ -59,12 +84,12 @@ public class InputController {
                         currentTile = new Wall();
                         currentTile.initialize(p);
                     } else if(mapOfMonsters.get(currenctChar) != null){
-                        Enemy e = mapOfMonsters.get(currenctChar);
+                        Enemy e = new Monster(mapOfMonsters.get(currenctChar));
                         e.initialize(p, generator);
                         enemies.add(e);
                         currentTile =  e;
                     } else if(mapOfTraps.get(currenctChar) != null){
-                        Enemy e = mapOfMonsters.get(currenctChar);
+                        Enemy e = new Trap(mapOfTraps.get(currenctChar));
                         e.initialize(p, generator);
                         enemies.add(e);
                         currentTile = e;
@@ -82,13 +107,19 @@ public class InputController {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-        return new BoardGame(tiles, enemies, callback);
+        return new BoardGame(tiles, enemies, messageCallback, y,width, player);
     }
 
     public Player CreatePlayer(){
         Scanner scan = new Scanner(System.in);
         System.out.println("choose player");
-        return mapOfPlayers.get(scan.next().charAt(0));
+        System.out.println("1 - John Snow");
+        System.out.println("2 - The Hound");
+        System.out.println("3 - Melisandre");
+        System.out.println("4 - Thoros of Myr");
+        System.out.println("5 - Arya Stark");
+        System.out.println("6 - Bronn");
+        return mapOfPlayers.get(scan.nextInt());
 
     }
 }

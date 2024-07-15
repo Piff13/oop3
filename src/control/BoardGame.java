@@ -18,6 +18,8 @@ public class BoardGame {
     public TreeMap<Position,Tile> tiles;
     public List<Enemy> enemies;
     public Player player;
+    public int boardWidth;
+    public int boardHeight;
     public MessageCallback callBack;
 
     public BoardGame() {
@@ -28,10 +30,13 @@ public class BoardGame {
     {
         return tiles.get(p);
     }
-    public  BoardGame(TreeMap<Position,Tile> tiles, List<Enemy> enemies, MessageCallback callback){
+    public BoardGame(TreeMap<Position,Tile> tiles, List<Enemy> enemies, MessageCallback callback, int boardHeight, int boardWidth, Player p){
        this.tiles= tiles;
        this.enemies = enemies;
        this.callBack = callback;
+       this.boardWidth = boardWidth;
+       this.boardHeight = boardHeight;
+       this.player = p;
     }
     public List<Enemy> getEnemies (){
         return enemies;
@@ -41,53 +46,52 @@ public class BoardGame {
         tiles.put(e.getPosition(), new Empty());
         enemies.remove(e);
     }
-    public void addEmpty(Position p){
-        tiles.put(p, new Empty());
-    }
     public  boolean IsAllDeath(){
         return  0 == enemies.size();
     }
     public  void PlayGame(){
-        Scanner sc = new Scanner(System.in);
         while(player.alive() && !IsAllDeath()){
-            char act= sc.next().charAt(0);
-            chooseAct(act);
+            chooseAct();
             Iterator<Enemy> iter = enemies.iterator();
             while(player.alive() && iter.hasNext()){
                 iter.next().OnTick();
             }
             callBack.send(player.toString());
-            BoardView board = new BoardView(tiles);
+            BoardView board = new BoardView(tiles,boardHeight, boardWidth);
             board.printBoard();
+            player.OnTick();
         }
     }
-    public  void chooseAct(char act){
+    public  void chooseAct(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("choose w to move up , s down , a left, d right, e special ability and q nothing");
+        char act= sc.next().charAt(0);
         Position p =player.getPosition();
         int x= p.getX();
         int y= p.getY();
         boolean found = false;
         while(!found){
             if(act == 'w'){
-                player.move(x,y+1);
-                found = true;
-            }
-            if(act == 's'){
                 player.move(x,y-1);
                 found = true;
             }
-            if(act == 'a'){
+            else if(act == 's'){
+                player.move(x,y+1);
+                found = true;
+            }
+            else if(act == 'a'){
                 player.move(x-1,y);
                 found = true;
             }
-            if(act == 'd'){
+            else if(act == 'd'){
                 player.move(x+1,y);
                 found = true;
             }
-            if(act == 'e'){
+            else if(act == 'e'){
                 player.SpecialAbility();
                 found = true;
             }
-            if(act == 'q'){
+            else if(act == 'q'){
                 found = true;
             } else{
                 callBack.send("illegal char");

@@ -2,6 +2,7 @@ package model.tiles.units.players;
 
 import control.BoardGame;
 import model.tiles.units.enemies.Enemy;
+import model.utils.BoardHelper;
 import model.utils.callbacks.MessageCallback;
 
 import java.util.LinkedList;
@@ -14,8 +15,8 @@ public class warrior extends  Player {
     protected final int BONUS_ATTACK_WARRIOR = 2;
     protected final int WARRIOR_COOLDOWN;
     protected int reamainingCooldown ;
-    public warrior(String name, int hitPoints, int attack, int defense, int cooldown, BoardGame board, MessageCallback callback) {
-        super(name, hitPoints, attack, defense, board, callback);
+    public warrior(String name, int hitPoints, int attack, int defense, int cooldown, BoardHelper boardHelper, MessageCallback callback) {
+        super(name, hitPoints, attack, defense, boardHelper, callback);
         this.reamainingCooldown=0;
         this.WARRIOR_COOLDOWN = cooldown;
     }

@@ -2,6 +2,7 @@ package model.tiles.units.players;
 
 import control.BoardGame;
 import model.tiles.units.enemies.Enemy;
+import model.utils.BoardHelper;
 import model.utils.callbacks.MessageCallback;
 
 import java.util.List;
@@ -14,8 +15,8 @@ public class Mage extends Player{
     int spellPower;
     final int HITS_COUNT;
     final int ABILITY_RANGE;
-    public Mage(String name, int hitPoints, int attack, int defense, BoardGame board, int manaPool, int manaCost, int spellPower, int hitsCount, int range, MessageCallback callback){
-        super(name, hitPoints, attack, defense, board, callback);
+    public Mage(String name, int hitPoints, int attack, int defense, int manaPool, int manaCost, int spellPower, int hitsCount, int range, BoardHelper boardHelper, MessageCallback callback){
+        super(name, hitPoints, attack, defense, boardHelper, callback);
         this.manaPool = manaPool;
         this.MANA_COST = manaCost;
         this.spellPower = spellPower;
@@ -70,7 +71,7 @@ public class Mage extends Player{
     }
 
     public String toString(){
-        return super.toString() + " ,manaPool: " + manaPool + " ,spellPower: " + spellPower;
+        return super.toString() + " ,currentMana: " + currentMana + " ,spellPower: " + spellPower;
     }
 
 }

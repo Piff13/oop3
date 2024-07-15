@@ -6,6 +6,7 @@ import model.tiles.Tile;
 import model.tiles.Wall;
 import model.tiles.units.enemies.Enemy;
 import model.tiles.units.players.Player;
+import model.utils.BoardHelper;
 import model.utils.Health;
 import model.utils.Position;
 import model.utils.callbacks.MessageCallback;
@@ -17,17 +18,17 @@ public abstract class Unit extends Tile {
     protected Health health;
     protected int attack;
     protected int defense;
-    protected BoardGame board;
     protected Generator generator;
+    protected BoardHelper boardHelper;
 
-    public Unit(char tile, String name, int hitPoints, int attack, int defense,BoardGame board,MessageCallback callBack) {
+    public Unit(char tile, String name, int hitPoints, int attack, int defense, BoardHelper boardHelper, MessageCallback callBack) {
         super(tile);
         this.name = name;
         this.health = new Health(hitPoints);
         this.attack = attack;
         this.defense = defense;
-        this.board= board;
         this.callBack = callBack;
+        this.boardHelper = boardHelper;
     }
 
     public void initialize(Position p, Generator generator){
@@ -91,7 +92,7 @@ public abstract class Unit extends Tile {
     public abstract void kill(Unit uni);
     public  void move(int x, int y){
         Position updatedPosition=new Position(x,y);
-        Tile tile= board.getTile(updatedPosition);
+        Tile tile= boardHelper.getTile(updatedPosition);
         interact(tile);
     }
     //TODO: move to heroic unit to abstract

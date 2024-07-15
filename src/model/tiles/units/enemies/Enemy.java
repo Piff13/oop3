@@ -4,14 +4,15 @@ import control.BoardGame;
 import model.tiles.Empty;
 import model.tiles.units.Unit;
 import model.tiles.units.players.Player;
+import model.utils.BoardHelper;
 import model.utils.Position;
 import model.utils.callbacks.MessageCallback;
 
 public abstract class Enemy extends Unit {
     protected int experienceValue;
 
-    public Enemy(char tile, String name, int hitPoints, int attack, int defense, int experienceValue, BoardGame board, MessageCallback callback) {
-        super(tile, name, hitPoints, attack, defense,board, callback);
+    public Enemy(char tile, String name, int hitPoints, int attack, int defense, int experienceValue, BoardHelper boardHelper, MessageCallback callback) {
+        super(tile, name, hitPoints, attack, defense, boardHelper, callback);
         this.experienceValue = experienceValue;
     }
 
@@ -40,8 +41,7 @@ public abstract class Enemy extends Unit {
     }
     public void onDeath(Player p){
         p.addExperience(experienceValue);
-        board.addEmpty(position);
-        board.removeEnemy(this);
+        boardHelper.removeEnemy(this);
         callBack.send(this.toString() + "has died, xp gained is:" + experienceValue);
     }
     public void onDeath(Enemy e){

@@ -2,6 +2,7 @@ package model.tiles.units.enemies;
 
 import control.BoardGame;
 import model.tiles.units.players.Player;
+import model.utils.BoardHelper;
 import model.utils.Position;
 import model.utils.callbacks.MessageCallback;
 
@@ -9,13 +10,12 @@ import java.util.Random;
 
 public class Monster extends Enemy {
     protected final int vision;
-    public Monster(char tile, String name, int hitPoints, int attack, int defense, int experienceValue, int vision, BoardGame board, MessageCallback callback) {
-        super(tile, name, hitPoints, attack, defense, experienceValue,board, callback);
+    public Monster(char tile, String name, int hitPoints, int attack, int defense, int experienceValue, int vision, BoardHelper boardHelper, MessageCallback callback) {
+        super(tile, name, hitPoints, attack, defense, experienceValue,boardHelper, callback);
         this.vision = vision;
     }
     public void OnTick(){
-        Player p=board.player;
-        Position pos= p.getPosition();
+        Position pos= boardHelper.getPlayerPosition();
         if (pos.range(position)<vision){
             int x= position.getX()-pos.getX();
             int y= position.getY()-pos.getY();
@@ -62,5 +62,8 @@ public class Monster extends Enemy {
 
     }
 
-
+    public Monster(Monster other) {
+        super(other.tile, other.name, other.health.getCapacity(), other.attack, other.defense, other.experienceValue, other.boardHelper, other.callBack);
+        this.vision = other.vision;
+    }
 }

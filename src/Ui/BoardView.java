@@ -6,16 +6,19 @@ import model.utils.Position;
 import java.util.TreeMap;
 
 public class BoardView {
-    private  String[][] boardGame;
-    public  BoardView(TreeMap<Position, Tile> tiles ){
+    private  char[][] boardGame;
+    public BoardView(TreeMap<Position, Tile> tiles, int height, int width){
+        boardGame = new char[height][width];
         for (Tile tile : tiles.values()) {
             Position p = tile.getPosition();
-            boardGame[p.getX()][p.getY()]=tile.toString();
+            if(tile.tile == 'k')
+                System.out.println("x :" + tile.getPosition().getX() + " ,y: " + tile.getPosition().getY());
+            boardGame[p.getY()][p.getX()]=tile.view();
         }
     }
     public void printBoard(){
-        for (String[] row : boardGame) {
-            for (String s : row) {
+        for (char[] row : boardGame) {
+            for (char s : row) {
                 System.out.print(s);
             }
             System.out.println();
