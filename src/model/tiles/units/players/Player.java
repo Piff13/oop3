@@ -79,10 +79,6 @@ public abstract class Player extends Unit {
 
     public void visit(Enemy e){
         combatBattle(e);
-        if(!e.alive()){
-            addExperience(e.experienceValue());
-            e.onDeath(this);
-        }
     }
     public void kill(Unit unit){
         unit.onDeath(this);

@@ -66,6 +66,7 @@ public abstract class Unit extends Tile {
         Position p=enemy.getPosition();
         attackOther(enemy,attack());
         if(!enemy.alive()){
+            System.out.println("hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
             this.swapPosition(boardHelper.getTile(p));
         }
 

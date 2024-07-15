@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="runing" />
+    <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="runing">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/control/BoardGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/control/BoardGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721053775388</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="runing">
+      <option name="closed" value="true" />
+      <created>1721063560408</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721063560408</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,14 +147,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/control/BoardGame.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/src/model/tiles/units/Unit.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/model/tiles/units/Characters.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/src/model/tiles/units/Unit.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
