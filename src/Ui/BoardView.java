@@ -3,13 +3,14 @@ package Ui;
 import model.tiles.Tile;
 import model.utils.Position;
 
+import java.util.List;
 import java.util.TreeMap;
 
 public class BoardView {
     private  char[][] boardGame;
-    public BoardView(TreeMap<Position, Tile> tiles, int height, int width){
+    public BoardView(List< Tile> tiles, int height, int width){
         boardGame = new char[height][width];
-        for (Tile tile : tiles.values()) {
+        for (Tile tile : tiles) {
             Position p = tile.getPosition();
             if(tile.tile == 'k')
                 System.out.println("x :" + tile.getPosition().getX() + " ,y: " + tile.getPosition().getY());

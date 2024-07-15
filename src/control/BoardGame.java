@@ -15,7 +15,7 @@ import java.util.*;
 import java.util.List;
 
 public class BoardGame {
-    public TreeMap<Position,Tile> tiles;
+    public List<Tile> tiles;
     public List<Enemy> enemies;
     public Player player;
     public int boardWidth;
@@ -28,9 +28,17 @@ public class BoardGame {
 
     public Tile getTile(Position p)
     {
-        return tiles.get(p);
+        Tile tile=null;
+        for(Tile t:tiles){
+            Position p1 =t.getPosition();
+            if(p1.getX()==p.getX()&& p1.getY()== p.getY()){
+                tile=t;
+            }
+
+        }
+        return  tile;
     }
-    public BoardGame(TreeMap<Position,Tile> tiles, List<Enemy> enemies, MessageCallback callback, int boardHeight, int boardWidth, Player p){
+    public BoardGame(List<Tile> tiles, List<Enemy> enemies, MessageCallback callback, int boardHeight, int boardWidth, Player p){
        this.tiles= tiles;
        this.enemies = enemies;
        this.callBack = callback;
@@ -42,8 +50,10 @@ public class BoardGame {
         return enemies;
     }
     public void removeEnemy(Enemy e){
-        tiles.remove(e.getPosition(),e);
-        tiles.put(e.getPosition(), new Empty());
+        Tile t= new Empty();
+        t.initialize(e.getPosition());
+        tiles.add(t);
+        tiles.remove(e);
         enemies.remove(e);
     }
     public  boolean IsAllDeath(){

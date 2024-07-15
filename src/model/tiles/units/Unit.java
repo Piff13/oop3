@@ -63,9 +63,10 @@ public abstract class Unit extends Tile {
         return life;
     }
     public void combatBattle(Unit enemy) {
+        Position p=enemy.getPosition();
         attackOther(enemy,attack());
         if(!enemy.alive()){
-            this.swapPosition(enemy);
+            this.swapPosition(boardHelper.getTile(p));
         }
 
     }
@@ -75,6 +76,7 @@ public abstract class Unit extends Tile {
 
     public void visit(Empty e){
         swapPosition(e);
+
     }
 
     public void visit(Wall w){

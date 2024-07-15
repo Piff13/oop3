@@ -63,7 +63,7 @@ public class InputController {
         );
     }
     public BoardGame CreateBoardFromFile(String filePath, Player player, Generator generator){
-        TreeMap<Position,Tile> tiles = new TreeMap<>();
+        List<Tile> tiles = new LinkedList<>();
         List<Enemy> enemies = new LinkedList<Enemy>();
         int y = 0;//will also help to determine board height
         int width = 0;
@@ -98,7 +98,7 @@ public class InputController {
                         currentTile = player;
                         player.initialize(p, generator);
                     }
-                    tiles.put(p, currentTile);
+                    tiles.add( currentTile);
                 }
                 y++;
             }

@@ -71,7 +71,7 @@ public class Mage extends Player{
     }
 
     public String toString(){
-        return super.toString() + " ,currentMana: " + currentMana + " ,spellPower: " + spellPower;
+        return super.toString() + " ,manaPool: " + manaPool + " ,spellPower: " + spellPower;
     }
 
 }

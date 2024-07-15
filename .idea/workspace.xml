@@ -4,25 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="add controller">
-      <change afterPath="$PROJECT_DIR$/src/model/utils/BoardHelper.java" afterDir="false" />
+    <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="runing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ui/BoardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/BoardView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/BoardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/Characters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/Characters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Monster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Trap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Trap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/utils/Health.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/utils/Health.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/utils/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/utils/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/utils/BoardHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/utils/BoardHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InputController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +87,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720657040957</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="runing">
+      <option name="closed" value="true" />
+      <created>1721030811849</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721030811849</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,24 +126,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="generalize functions, add trap and mage" />
-    <option name="LAST_COMMIT_MESSAGE" value="generalize functions, add trap and mage" />
+    <MESSAGE value="runing" />
+    <option name="LAST_COMMIT_MESSAGE" value="runing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Ui/BoardView.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/control/BoardGame.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/control/BoardGame.java</url>
-          <line>99</line>
+          <line>110</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -154,6 +142,10 @@
           <line>40</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="18" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

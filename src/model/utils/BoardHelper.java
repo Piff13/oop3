@@ -23,7 +23,7 @@ public class BoardHelper {
         return board.getEnemies();
     }
     public void removeEnemy(Enemy e){
-        board.removeEnemy(e);
+         board.removeEnemy(e);
     }
     public Position getPlayerPosition(){
         return board.player.getPosition();
