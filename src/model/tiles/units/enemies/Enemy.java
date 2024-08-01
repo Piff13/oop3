@@ -32,9 +32,6 @@ public abstract class Enemy extends Unit {
 
     public void visit(Player p) {
         combatBattle(p);
-        if (!p.alive()){
-            p.onDeath(this);
-        }
     }
     public void kill(Unit unit){
         unit.onDeath(this);
@@ -42,10 +39,9 @@ public abstract class Enemy extends Unit {
     public void onDeath(Player p){
         p.addExperience(experienceValue);
         boardHelper.removeEnemy(this);
-        callBack.send(this.toString() + "has died, xp gained is:" + experienceValue);
+        callBack.send(this.toString() + " has died, xp gained is:" + experienceValue +'\n');
     }
     public void onDeath(Enemy e){
         return;//no friendly fire
     }
-
 }

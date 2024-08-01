@@ -62,12 +62,10 @@ public class Mage extends Player{
 
     public void tryToHitRandomTargets(List<Enemy> potentialTargets,int damage){
         Random rand = new Random();
-        int generate = rand.nextInt(0, potentialTargets.size());
+        int generate = rand.nextInt(0, potentialTargets.size() + 1);
         Enemy target = potentialTargets.get(generate);
-        if (target != null) {
-            attackOther(target, spellPower);
-            target.takeDamage(Math.min(damage - defense ,0),this);
-        }
+        attackOther(target, spellPower);
+        target.takeDamage(Math.min(damage - defense ,0),this);
     }
 
     public String toString(){

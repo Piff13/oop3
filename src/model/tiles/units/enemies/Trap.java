@@ -17,11 +17,6 @@ public class Trap extends Enemy{
         visible = true;
     }
 
-    @Override
-    public void SpecialAbility() {
-
-    }
-
     public void OnTick(){
         visible = tickCount < VISIBILT_TIME;
         if(tickCount == VISIBILT_TIME + INVISIBILITY_TIME)

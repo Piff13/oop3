@@ -1,6 +1,7 @@
 package model.tiles.units.players;
 
 import control.BoardGame;
+import model.tiles.units.HeroicUnit;
 import model.tiles.units.Unit;
 import model.tiles.units.enemies.Enemy;
 import model.utils.BoardHelper;
@@ -11,7 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-public abstract class Player extends Unit {
+public abstract class Player extends Unit implements HeroicUnit {
     public static final char PLAYER_TILE = '@';
     protected static final int LEVEL_REQUIREMENT = 50;
     protected static final int HEALTH_GAIN = 10;
@@ -43,11 +44,11 @@ public abstract class Player extends Unit {
         health.heal();
         attack += attackGain;
         defense += defenseGain;
-        callBack.send("you leveled up!" + printLevelUpStats());
+        callBack.send("you leveled up!\n" + printLevelUpStats());
     }
     protected String printLevelUpStats(){
-        String str = "new level is: " + level + " you gained: " + healthGain() + " hp, ";
-        str += attackGain() + " attack, " + defenseGain() + " defense";
+        String str = "new level is: " + level + " you gained: " + healthGain() + " hp, \n";
+        str += attackGain() + " attack, " + defenseGain() + " defense\n";
         return str;
     }
 
@@ -106,6 +107,10 @@ public abstract class Player extends Unit {
         updateDelay();
     }
     public abstract void updateDelay();
+    public abstract void SpecialAbility();
+    public void castAbility(){
+        SpecialAbility();
+    }
 
     public String toString(){
         return super.toString() + " ,level: " + level + " ,xp: " + experience;

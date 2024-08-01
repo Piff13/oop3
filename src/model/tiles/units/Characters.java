@@ -1,8 +1,10 @@
 package model.tiles.units;
 
 import control.BoardGame;
+import model.tiles.units.enemies.Boss;
 import model.tiles.units.enemies.Monster;
 import model.tiles.units.enemies.Trap;
+import model.tiles.units.players.Hunter;
 import model.tiles.units.players.Mage;
 import model.tiles.units.players.Rogue;
 import model.tiles.units.players.warrior;
@@ -34,6 +36,9 @@ public class Characters {
     public Rogue Create_Bronn(){
         return new Rogue("Bronn",250,35,3,50, boardHelper, messageCallback);
     }
+    public Hunter Create_Ygritte(){
+        return new Hunter("Ygritte", 220, 30, 2, boardHelper, messageCallback, 6);
+    }
     public Monster Create_Lannister_Solider(){
         return new Monster('s',"Lannister Solider",80,8,3,25,3, boardHelper, messageCallback);
     }
@@ -56,13 +61,13 @@ public class Characters {
         return new Monster('w',"White Walker",2000,150,50,1000,6, boardHelper, messageCallback);
     }
     public Monster Create_The_Mountain(){
-        return new Monster('M',"The Mountain",1000,60,25,500,6, boardHelper, messageCallback);
+        return new Boss('M',"The Mountain",1000,60,25,500,6, boardHelper, messageCallback, 5);
     }
     public Monster Create_Queen_Cersei(){
-        return new Monster('C',"Queen Cersei",100,10,10,1000,1, boardHelper, messageCallback);
+        return new Boss('C',"Queen Cersei",100,10,10,1000,1, boardHelper, messageCallback, 8);
     }
     public Monster Create_Nights_King(){
-        return new Monster('K',"Night’s King",5000,300,150,5000,8, boardHelper, messageCallback);
+        return new Boss('K',"Night’s King",5000,300,150,5000,8, boardHelper, messageCallback, 3);
     }
     public Trap Create_Bonus_Trap(){
         return new Trap(1,5,'B',"Bonus Trap",1,1,1,250,boardHelper, messageCallback);

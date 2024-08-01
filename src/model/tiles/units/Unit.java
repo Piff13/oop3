@@ -41,8 +41,8 @@ public abstract class Unit extends Tile {
     }
     public void attackOther(Unit target,int damage){
         int defense = target.defend();
-        callBack.send(this.toString() + "attacked with" + damage + " damage" + target.toString());
-        callBack.send(target.toString() + "rolled" + defense + " defense");
+        callBack.send(this.toString() + " attacked with " + damage + " damage " + target.toString() +'\n');
+        callBack.send(target.toString() + " rolled " + defense + " defense\n");
         target.takeDamage(Math.max(damage - defense, 0),this);
 
     }
@@ -57,7 +57,7 @@ public abstract class Unit extends Tile {
 
     public int takeDamage(int damage, Unit dealer){
         int life=health.takeDamage(damage);
-        callBack.send(this.toString() + "took " + damage + " damage");
+        callBack.send(this.toString() + " took " + damage + " damage\n");
         if(!alive())
             dealer.kill(this);
         return life;
@@ -65,8 +65,7 @@ public abstract class Unit extends Tile {
     public void combatBattle(Unit enemy) {
         Position p=enemy.getPosition();
         attackOther(enemy,attack());
-        if(!enemy.alive()){
-            System.out.println("hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
+        if(!enemy.alive() & boardHelper.getPlayer().alive()){
             this.swapPosition(boardHelper.getTile(p));
         }
 
@@ -98,8 +97,6 @@ public abstract class Unit extends Tile {
         Tile tile= boardHelper.getTile(updatedPosition);
         interact(tile);
     }
-    //TODO: move to heroic unit to abstract
-    public abstract void SpecialAbility();
     public abstract void OnTick();
     public String toString(){
         return "name: " + name + " ,hp: " + health + " ,attack: " + attack + " ,defense: " + defense;

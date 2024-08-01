@@ -4,13 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="runing">
+    <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="2nd running">
+      <change afterPath="$PROJECT_DIR$/src/model/tiles/units/HeroicUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Boss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Hunter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/Ui/BoardView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/Ui/BoardView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/control/BoardGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/control/BoardGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Mage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/warrior.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/view/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/view/InputController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ui/BoardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/BoardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/BoardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/Characters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/Characters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Trap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Trap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InputController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +37,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -34,6 +52,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -57,6 +78,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -109,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721063560408</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2nd running">
+      <option name="closed" value="true" />
+      <created>1721065717169</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721065717169</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,21 +171,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="generalize functions, add trap and mage" />
     <MESSAGE value="runing" />
-    <option name="LAST_COMMIT_MESSAGE" value="runing" />
+    <MESSAGE value="2nd running" />
+    <option name="LAST_COMMIT_MESSAGE" value="2nd running" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/model/tiles/units/Unit.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/model/tiles/units/Unit.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="18" />

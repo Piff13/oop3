@@ -59,7 +59,8 @@ public class InputController {
                 entry(3, characterController.Create_Melisandre()),
                 entry(4, characterController.Create_Thoros_of_Myr()),
                 entry(5, characterController.Create_Arya_Stark()),
-                entry(6, characterController.Create_Bronn())
+                entry(6, characterController.Create_Bronn()),
+                entry(7, characterController.Create_Ygritte())
         );
     }
     public BoardGame CreateBoardFromFile(String filePath, Player player, Generator generator){
@@ -113,13 +114,17 @@ public class InputController {
     public Player CreatePlayer(){
         Scanner scan = new Scanner(System.in);
         System.out.println("choose player");
-        System.out.println("1 - John Snow");
-        System.out.println("2 - The Hound");
-        System.out.println("3 - Melisandre");
-        System.out.println("4 - Thoros of Myr");
-        System.out.println("5 - Arya Stark");
-        System.out.println("6 - Bronn");
-        return mapOfPlayers.get(scan.nextInt());
+        System.out.println("1 - " + mapOfPlayers.get(1));
+        System.out.println("2 - " + mapOfPlayers.get(2));
+        System.out.println("3 - " + mapOfPlayers.get(3));
+        System.out.println("4 - " + mapOfPlayers.get(4));
+        System.out.println("5 - " + mapOfPlayers.get(5));
+        System.out.println("6 - " + mapOfPlayers.get(6));
+        System.out.println("7 - " + mapOfPlayers.get(7));
+        int index = scan.nextInt();
+        while(!(index >= 1 & index <= 7))//legal bound
+            index = scan.nextInt();
+        return mapOfPlayers.get(index);
 
     }
 }

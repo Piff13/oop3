@@ -12,8 +12,6 @@ public class BoardView {
         boardGame = new char[height][width];
         for (Tile tile : tiles) {
             Position p = tile.getPosition();
-            if(tile.tile == 'k')
-                System.out.println("x :" + tile.getPosition().getX() + " ,y: " + tile.getPosition().getY());
             boardGame[p.getY()][p.getX()]=tile.view();
         }
     }

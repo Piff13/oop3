@@ -14,54 +14,56 @@ public class Monster extends Enemy {
         super(tile, name, hitPoints, attack, defense, experienceValue,boardHelper, callback);
         this.vision = vision;
     }
-    public void OnTick(){
-        Position pos= boardHelper.getPlayerPosition();
-        if (pos.range(position)<vision){
-            int x= position.getX()-pos.getX();
-            int y= position.getY()-pos.getY();
-            int AbsX=Math.abs(x);
-            int AbsY=Math.abs(y);
-            if(AbsX>AbsY){
-                if(x>0){
-                    move(position.getX()-1,position.getY());
-                }
-                else {
-                    move(position.getX()+1,position.getY());
-                }
+    public void chasePlayer(Position posPlayer){
+        int x= position.getX()-posPlayer.getX();
+        int y= position.getY()-posPlayer.getY();
+        int AbsX=Math.abs(x);
+        int AbsY=Math.abs(y);
+        if(AbsX>AbsY){
+            if(x>0){
+                move(position.getX()-1,position.getY());
             }
             else {
-                if(y>0){
-                    move(position.getX(),position.getY()+1);
-                }
-                else {
-                    move(position.getX(),position.getY()-1);
-                }
-            }
-        }
-        else{
-            Random rand =new Random();
-            int step= rand.nextInt(0,4);
-            if(step==0){
-                move(position.getX(),position.getY()+1);
-            }
-             else if(step==1){
-                move(position.getX(),position.getY()-1);
-            }
-            else if(step==2){
                 move(position.getX()+1,position.getY());
             }
-            else if(step==3){
-                move(position.getX()-1,position.getY());
+        }
+        else {
+            if(y>0){
+                move(position.getX(),position.getY()+1);
+            }
+            else {
+                move(position.getX(),position.getY()-1);
             }
         }
     }
-
-
-
-
-    @Override
-    public void SpecialAbility() {
-
+    public void randomStep(){
+        Random rand =new Random();
+        int step= rand.nextInt(0,5);
+        if(step==0){
+            move(position.getX(),position.getY()+1);
+        }
+        else if(step==1){
+            move(position.getX(),position.getY()-1);
+        }
+        else if(step==2){
+            move(position.getX()+1,position.getY());
+        }
+        else if(step==3){
+            move(position.getX()-1,position.getY());
+        } else
+            return;//do nothing
+    }
+    public boolean isPlayerInVision(Position player){
+        return player.range(position)<vision;
+    }
+    public void OnTick(){
+        Position pos= boardHelper.getPlayerPosition();
+        if (isPlayerInVision(pos)){
+            chasePlayer(pos);
+        }
+        else{
+            randomStep();
+        }
     }
 
     public Monster(Monster other) {

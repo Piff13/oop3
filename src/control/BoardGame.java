@@ -66,10 +66,10 @@ public class BoardGame {
             while(player.alive() && iter.hasNext()){
                 iter.next().OnTick();
             }
+            player.OnTick();
             callBack.send(player.toString());
             BoardView board = new BoardView(tiles,boardHeight, boardWidth);
             board.printBoard();
-            player.OnTick();
         }
     }
     public  void chooseAct(){
@@ -104,7 +104,8 @@ public class BoardGame {
             else if(act == 'q'){
                 found = true;
             } else{
-                callBack.send("illegal char");
+                callBack.send("illegal char, choose other\n");
+                act = sc.next().charAt(0);
             }
         }
         player.OnTick();
