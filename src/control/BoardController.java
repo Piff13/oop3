@@ -36,11 +36,19 @@ public class BoardController {
     }
     public void GameStart(){
         Player p = inputController.CreatePlayer();
-        while (index<4 && p.alive()){
+        messageCallback.send("you have selected:\n" + p.getName());
+        while (index<=4 && p.alive()){
             BoardGame board= inputController.CreateBoardFromFile(filePaths[index],p,generator);
             boardHelper.setBoard(board);
             board.PlayGame();
             index++;
+            if(p.alive())
+                messageCallback.send("level finished, advancing to level" + (index + 1) + "\n");
+        }
+        if(p.alive())
+            messageCallback.send("you won\n");
+        else{
+            messageCallback.send("you lost\n");
         }
     }
 }

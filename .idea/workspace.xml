@@ -4,30 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="2nd running">
-      <change afterPath="$PROJECT_DIR$/src/model/tiles/units/HeroicUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Boss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Hunter.java" afterDir="false" />
+    <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="add bonus">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/Ui/BoardView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/Ui/BoardView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/control/BoardGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/control/BoardGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Characters.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Characters.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Monster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Monster.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Mage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/warrior.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/view/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/view/InputController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ui/BoardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ui/BoardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/BoardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/Characters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/Characters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/HeroicUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/HeroicUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Boss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Monster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Trap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Trap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Hunter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/utils/Health.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/utils/Health.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +138,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721065717169</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add bonus">
+      <option name="closed" value="true" />
+      <created>1722539082994</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722539082994</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add bonus">
+      <option name="closed" value="true" />
+      <created>1722539134233</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1722539134233</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +187,8 @@
     <MESSAGE value="generalize functions, add trap and mage" />
     <MESSAGE value="runing" />
     <MESSAGE value="2nd running" />
-    <option name="LAST_COMMIT_MESSAGE" value="2nd running" />
+    <MESSAGE value="add bonus" />
+    <option name="LAST_COMMIT_MESSAGE" value="add bonus" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -181,6 +197,11 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="18" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/tiles/units/players/warrior.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

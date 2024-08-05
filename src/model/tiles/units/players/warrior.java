@@ -14,7 +14,7 @@ public class warrior extends  Player {
     protected final int BONUS_DEFENSE_WARRIOR = 1;
     protected final int BONUS_ATTACK_WARRIOR = 2;
     protected final int WARRIOR_COOLDOWN;
-    protected int reamainingCooldown ;
+    protected int reamainingCooldown;
     public warrior(String name, int hitPoints, int attack, int defense, int cooldown, BoardHelper boardHelper, MessageCallback callback) {
         super(name, hitPoints, attack, defense, boardHelper, callback);
         this.reamainingCooldown=0;
@@ -34,8 +34,9 @@ public class warrior extends  Player {
     @Override
     public void SpecialAbility() {
         if(reamainingCooldown > 0){
-            callBack.send("trying to use special ability too soon");
+            callBack.send("trying to use special ability too soon\n");
         } else {
+            callBack.send(this.getName() + " used Avenger's shield, healing for " + defense * 10 + "\n");
             health.gainHealth(defense * 10);
             reamainingCooldown = WARRIOR_COOLDOWN;
             hitEnemyInRange();
@@ -46,7 +47,7 @@ public class warrior extends  Player {
 
     @Override
     public void updateDelay() {
-        reamainingCooldown = Math.min(reamainingCooldown - 1, 0);
+        reamainingCooldown = Math.max(reamainingCooldown - 1, 0);
     }
 
     public void hitEnemyInRange(){
@@ -58,12 +59,16 @@ public class warrior extends  Player {
         Random rand = new Random();
         int generate = rand.nextInt(0, potentialTargets.size());
         Enemy target = potentialTargets.get(generate);
-        target.takeDamage(damage,this);
+        attackOtherAbility(target, damage);
     }
 
     public void levelup(){
         super.levelUp();
         reamainingCooldown = 0;
+    }
+
+    public String toString(){
+        return super.toString() + " ,cooldown: " + reamainingCooldown + "/" + WARRIOR_COOLDOWN;
     }
 
 }

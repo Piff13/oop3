@@ -1,6 +1,7 @@
 package model.tiles.units.enemies;
 
 import model.tiles.units.HeroicUnit;
+import model.tiles.units.Unit;
 import model.utils.BoardHelper;
 import model.utils.Position;
 import model.utils.callbacks.MessageCallback;
@@ -12,8 +13,15 @@ public class Boss extends Monster implements HeroicUnit {
         super(tile, name, hitPoints, attack, defense, experienceValue, vision, boardHelper, callback);
         this.abilityFrequency = abilityFrequency;
     }
+    public void attackOtherAbility(Unit target, int damage){
+        int defense = target.defend();
+        callBack.send(target.getName() + " has rolled " + defense + " defense points\n");
+        int damageTaken = Math.max(damage - defense, 0);
+        callBack.send((this.getName() + " hit " + target.getName() + " for " +  damageTaken + " ability damage\n"));
+        target.takeDamage(damageTaken,this);
+    }
     public void castAbility(){
-        attackOther(boardHelper.getPlayer(), attack);
+        attackOtherAbility(boardHelper.getPlayer(), attack);
     }
     public void OnTick(){
         Position pos = boardHelper.getPlayerPosition();
@@ -29,5 +37,8 @@ public class Boss extends Monster implements HeroicUnit {
             combatTicks = 0;
             randomStep();
         }
+    }
+    public String toString(){
+        return super.toString() + " ,combatTick: " + combatTicks + "/" + abilityFrequency;
     }
 }

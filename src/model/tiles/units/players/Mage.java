@@ -39,8 +39,9 @@ public class Mage extends Player{
 
     public void SpecialAbility(){
         if(currentMana < MANA_COST){
-            callBack.send("trying to use special ability too soon");
+            callBack.send("trying to use special ability too soon\n");
         }  else {
+            callBack.send(this.getName() + " used Blizzard\n");
             int hits = 0;
             List<Enemy> potentialTargets = getPotentialTargets(ABILITY_RANGE);
             int enemyNum = potentialTargets.size();
@@ -62,14 +63,13 @@ public class Mage extends Player{
 
     public void tryToHitRandomTargets(List<Enemy> potentialTargets,int damage){
         Random rand = new Random();
-        int generate = rand.nextInt(0, potentialTargets.size() + 1);
+        int generate = rand.nextInt(0, potentialTargets.size());
         Enemy target = potentialTargets.get(generate);
-        attackOther(target, spellPower);
-        target.takeDamage(Math.min(damage - defense ,0),this);
+        attackOtherAbility(target, damage);
     }
 
     public String toString(){
-        return super.toString() + " ,manaPool: " + manaPool + " ,spellPower: " + spellPower;
+        return super.toString() + " ,mana: " + currentMana + "/" + manaPool + " ,spellPower: " + spellPower;
     }
 
 }

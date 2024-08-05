@@ -39,11 +39,12 @@ public abstract class Unit extends Tile {
     public int attack(){
         return generator.generate(attack);
     }
-    public void attackOther(Unit target,int damage){
+    public void attackOther(Unit target, int damage){
         int defense = target.defend();
-        callBack.send(this.toString() + " attacked with " + damage + " damage " + target.toString() +'\n');
-        callBack.send(target.toString() + " rolled " + defense + " defense\n");
-        target.takeDamage(Math.max(damage - defense, 0),this);
+        callBack.send(target.getName() + " rolled " + defense + " defense points\n");
+        int damageTaken = Math.max(damage - defense, 0);
+        callBack.send(this.getName() + " has dealt: " + damageTaken + " damage points to " + target.getName() + '\n');
+        target.takeDamage(damageTaken,this);
 
     }
 
@@ -57,15 +58,19 @@ public abstract class Unit extends Tile {
 
     public int takeDamage(int damage, Unit dealer){
         int life=health.takeDamage(damage);
-        callBack.send(this.toString() + " took " + damage + " damage\n");
         if(!alive())
             dealer.kill(this);
         return life;
     }
     public void combatBattle(Unit enemy) {
+        callBack.send(this.getName() + " engaged in melee combat with " + enemy.getName() + "\n");
+        callBack.send(this.toString() + "\n");
+        callBack.send((enemy.toString()) + "\n");
+        int damage = attack();
+        callBack.send(this.getName() + " rolled  " + damage + " damage points" +'\n');
+        attackOther(enemy, damage);
         Position p=enemy.getPosition();
-        attackOther(enemy,attack());
-        if(!enemy.alive() & boardHelper.getPlayer().alive()){
+        if(!enemy.alive() & boardHelper.getPlayer().alive()){//don't switch if player died
             this.swapPosition(boardHelper.getTile(p));
         }
 
@@ -100,6 +105,9 @@ public abstract class Unit extends Tile {
     public abstract void OnTick();
     public String toString(){
         return "name: " + name + " ,hp: " + health + " ,attack: " + attack + " ,defense: " + defense;
+    }
+    public String getName(){
+        return name;
     }
 
 

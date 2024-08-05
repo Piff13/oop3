@@ -35,8 +35,9 @@ public class Rogue extends Player{
     @Override
     public void SpecialAbility() {
         if(energy-cost < 0){
-            callBack.send("trying to use special ability too soon");
+            callBack.send("trying to use special ability too soon\n");
         } else {
+            callBack.send(this.getName() + " used Fan of Knives\n");
             energy -= cost;
             hitEnemyInRange();
         }
@@ -53,11 +54,14 @@ public class Rogue extends Player{
         hitTargets(potentialTargets);
     }
 
-
     public void hitTargets(List<Enemy> potentialTargets){
         for (Enemy enemy : potentialTargets) {
-            attackOther(enemy, attack);
+            attackOtherAbility(enemy, attack);
         }
+    }
+
+    public String toString(){
+        return super.toString() + ", energy: " + energy + "/" + MAX_ENENERGY;
     }
 
 }

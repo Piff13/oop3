@@ -37,6 +37,6 @@ public class Health {
         current = capacity;
     }
     public String toString(){
-        return current + "";
+        return current + "/" + capacity;
     }
 }

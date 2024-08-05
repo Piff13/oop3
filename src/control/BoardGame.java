@@ -60,15 +60,17 @@ public class BoardGame {
         return  0 == enemies.size();
     }
     public  void PlayGame(){
+        BoardView board = new BoardView(tiles,boardHeight, boardWidth);
+        board.printBoard();//first print before moves
         while(player.alive() && !IsAllDeath()){
+            callBack.send(player.toString());
             chooseAct();
             Iterator<Enemy> iter = enemies.iterator();
             while(player.alive() && iter.hasNext()){
                 iter.next().OnTick();
             }
             player.OnTick();
-            callBack.send(player.toString());
-            BoardView board = new BoardView(tiles,boardHeight, boardWidth);
+            board = new BoardView(tiles,boardHeight, boardWidth);
             board.printBoard();
         }
     }
@@ -108,7 +110,6 @@ public class BoardGame {
                 act = sc.next().charAt(0);
             }
         }
-        player.OnTick();
     }
 
 }

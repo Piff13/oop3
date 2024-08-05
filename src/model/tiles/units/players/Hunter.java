@@ -10,6 +10,7 @@ public class Hunter extends Player{
     public int range;
     public int arrowCount;
     public int ticksCount = 0;
+    private int tickForMoreArrows = 10;
     public Hunter(String name, int hitPoints, int attack, int defense, BoardHelper boardHelper, MessageCallback callback, int range){
         super(name, hitPoints, attack, defense, boardHelper, callback);
         this.range = range;
@@ -22,7 +23,7 @@ public class Hunter extends Player{
         defense += level;
     }
     public void updateDelay(){
-        if(ticksCount == 10) {
+        if(ticksCount == tickForMoreArrows) {
             arrowCount += level;
             ticksCount = 0;
         } else {
@@ -44,15 +45,19 @@ public class Hunter extends Player{
     }
     public void SpecialAbility(){
         Enemy target = getClosestEnemyInRange();
-        if(target == null || arrowCount == 0)
-            callBack.send("unable to cast ability due to lack of arrows/ potential targets\n");
+        if(arrowCount == 0)
+            callBack.send("no more arrows\n");
+        else if(target == null){
+            callBack.send(this.getName() + " tried to use Shoot, but there are no foes in range\n");
+        }
         else {
+            callBack.send(this.getName() + " fired an arrow at " + target.getName() + "\n");
             arrowCount--;
-            attackOther(target, attack);
+            attackOtherAbility(target, attack);
         }
     }
 
     public String toString() {
-        return super.toString() + " ,arrowCount: " + arrowCount + " ,tickCount: " + ticksCount;
+        return super.toString() + " ,arrowCount: " + arrowCount + " ,tickCount: " + ticksCount + "/" + tickForMoreArrows;
     }
 }

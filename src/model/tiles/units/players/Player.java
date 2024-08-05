@@ -47,7 +47,7 @@ public abstract class Player extends Unit implements HeroicUnit {
         callBack.send("you leveled up!\n" + printLevelUpStats());
     }
     protected String printLevelUpStats(){
-        String str = "new level is: " + level + " you gained: " + healthGain() + " hp, \n";
+        String str = "new level is: " + level + " you gained: " + healthGain() + " hp, ";
         str += attackGain() + " attack, " + defenseGain() + " defense\n";
         return str;
     }
@@ -88,8 +88,7 @@ public abstract class Player extends Unit implements HeroicUnit {
     @Override
     public void onDeath(Enemy e) {
         this.setTile('X');
-        callBack.send("you died");
-
+        callBack.send(this.getName() + "was killed by " +  e.getName() + "\n");
     }
     public void onDeath(Player p){
         return;//no friendly fire
@@ -112,8 +111,15 @@ public abstract class Player extends Unit implements HeroicUnit {
         SpecialAbility();
     }
 
-    public String toString(){
-        return super.toString() + " ,level: " + level + " ,xp: " + experience;
+    public String toString() {
+        return super.toString() + " ,level: " + level + " ,xp: " + experience + "/" + levelRequirement();
+    }
+    public void attackOtherAbility(Unit target, int damage){
+        int defense = target.defend();
+        callBack.send(target.getName() + " has rolled " + defense + " defense points\n");
+        int damageTaken = Math.max(damage - defense, 0);
+        callBack.send((this.getName() + " hit " + target.getName() + " for " +  damageTaken + " ability damage\n"));
+        target.takeDamage(damageTaken,this);
     }
 
 

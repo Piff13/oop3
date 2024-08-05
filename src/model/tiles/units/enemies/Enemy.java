@@ -37,9 +37,9 @@ public abstract class Enemy extends Unit {
         unit.onDeath(this);
     }
     public void onDeath(Player p){
+        callBack.send(this.getName() + " has died, xp gained is:" + experienceValue +'\n');
         p.addExperience(experienceValue);
         boardHelper.removeEnemy(this);
-        callBack.send(this.toString() + " has died, xp gained is:" + experienceValue +'\n');
     }
     public void onDeath(Enemy e){
         return;//no friendly fire

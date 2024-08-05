@@ -29,10 +29,10 @@ public class Monster extends Enemy {
         }
         else {
             if(y>0){
-                move(position.getX(),position.getY()+1);
+                move(position.getX(),position.getY()-1);
             }
             else {
-                move(position.getX(),position.getY()-1);
+                move(position.getX(),position.getY()+1);
             }
         }
     }
@@ -69,5 +69,10 @@ public class Monster extends Enemy {
     public Monster(Monster other) {
         super(other.tile, other.name, other.health.getCapacity(), other.attack, other.defense, other.experienceValue, other.boardHelper, other.callBack);
         this.vision = other.vision;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " ,vision range: " + vision;
     }
 }
