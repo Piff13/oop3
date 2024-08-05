@@ -13,6 +13,10 @@ public class Boss extends Monster implements HeroicUnit {
         super(tile, name, hitPoints, attack, defense, experienceValue, vision, boardHelper, callback);
         this.abilityFrequency = abilityFrequency;
     }
+    public Boss(Boss other){
+        super(other.tile, other.name, other.health.getCapacity(),other.attack, other.defense, other.experienceValue, other.vision, other.boardHelper, other.callBack);
+        this.abilityFrequency = other.abilityFrequency;
+    }
     public void attackOtherAbility(Unit target, int damage){
         int defense = target.defend();
         callBack.send(target.getName() + " has rolled " + defense + " defense points\n");
@@ -40,5 +44,8 @@ public class Boss extends Monster implements HeroicUnit {
     }
     public String toString(){
         return super.toString() + " ,combatTick: " + combatTicks + "/" + abilityFrequency;
+    }
+    public Enemy getCopy(){
+        return new Boss(this);
     }
 }

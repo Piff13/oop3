@@ -109,6 +109,7 @@ public abstract class Unit extends Tile {
     public String getName(){
         return name;
     }
-
-
+    public Tile getCopy(){
+        return null;
+    }
 }

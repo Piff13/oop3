@@ -38,4 +38,7 @@ public class Trap extends Enemy{
         tickCount = 0;
         visible = true;
     }
+    public Enemy getCopy(){
+        return new Trap(this);
+    }
 }

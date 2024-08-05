@@ -44,4 +44,5 @@ public abstract class Enemy extends Unit {
     public void onDeath(Enemy e){
         return;//no friendly fire
     }
+    public abstract Enemy getCopy();
 }

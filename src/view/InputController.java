@@ -22,8 +22,8 @@ public class InputController {
     private MessageCallback messageCallback;
     private BoardHelper boardHelper;
     private Characters characterController;
-    private Map<Character, Monster> mapOfMonsters;
-    private Map<Character, Trap> mapOfTraps;
+    private Map<Character, Tile> mapOfTiles;
+    private Map<Character,? extends Enemy> mapOfEnemies;
     private Map<Integer, Player> mapOfPlayers;
     public InputController(MessageCallback messageCallback, BoardHelper boardHelper){
         this.messageCallback = messageCallback;
@@ -32,7 +32,12 @@ public class InputController {
         this.initMaps();
     }
     private void initMaps(){
-        mapOfMonsters = Map.ofEntries(
+        mapOfTiles = Map.ofEntries(
+                entry('.', new Empty()),
+                entry('#', new Wall())
+        );
+
+        mapOfEnemies = Map.ofEntries(
                 entry('s',  characterController.Create_Lannister_Solider()),
                 entry('k',  characterController.Create_Lannister_Knight()),
                 entry('q',  characterController.Create_Queens_Guard()),
@@ -42,15 +47,10 @@ public class InputController {
                 entry('w',  characterController.Create_White_Walker()),
                 entry('M',  characterController.Create_The_Mountain()),
                 entry('C',  characterController.Create_Queen_Cersei()),
-                entry('K',  characterController.Create_Nights_King())
-
-        );
-
-        mapOfTraps = Map.ofEntries(
+                entry('K',  characterController.Create_Nights_King()),
                 entry('B',  characterController.Create_Bonus_Trap()),
                 entry('Q',  characterController.Create_Queens_Trap()),
                 entry('D', characterController.Create_Death_Trap())
-
         );
 
         mapOfPlayers = Map.ofEntries(
@@ -62,6 +62,9 @@ public class InputController {
                 entry(6, characterController.Create_Bronn()),
                 entry(7, characterController.Create_Ygritte())
         );
+    }
+    private Tile createTile(Tile t){
+        return t.getCopy();
     }
     public BoardGame CreateBoardFromFile(String filePath, Player player, Generator generator){
         List<Tile> tiles = new LinkedList<>();
@@ -78,34 +81,25 @@ public class InputController {
                     char currenctChar = data.charAt(x);
                     Tile currentTile;
                     Position p = new Position(x, y);
-                    if(currenctChar == '.') {
-                        currentTile = new Empty();
+                    if(mapOfTiles.get(currenctChar) != null) {
+                        currentTile = createTile(mapOfTiles.get(currenctChar));
                         currentTile.initialize(p);
-                    } else if(currenctChar == '#'){
-                        currentTile = new Wall();
-                        currentTile.initialize(p);
-                    } else if(mapOfMonsters.get(currenctChar) != null){
-                        Enemy e = new Monster(mapOfMonsters.get(currenctChar));
-                        e.initialize(p, generator);
-                        enemies.add(e);
-                        currentTile =  e;
-                    } else if(mapOfTraps.get(currenctChar) != null){
-                        Enemy e = new Trap(mapOfTraps.get(currenctChar));
+                    } else if(mapOfEnemies.get(currenctChar) != null){
+                        Enemy e = (Enemy)createTile(mapOfEnemies.get(currenctChar));
                         e.initialize(p, generator);
                         enemies.add(e);
                         currentTile = e;
-                        mapOfTraps.get(currenctChar).initialize(p, generator);
                     } else {//only remaining option is player - @
                         currentTile = player;
                         player.initialize(p, generator);
                     }
-                    tiles.add( currentTile);
+                    tiles.add(currentTile);
                 }
                 y++;
             }
             myReader.close();
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred.\n");
             e.printStackTrace();
         }
         return new BoardGame(tiles, enemies, messageCallback, y,width, player);

@@ -13,4 +13,7 @@ public class Wall extends Tile {
     public void accept(Unit unit) {
         unit.visit(this);
     }
+    public Tile getCopy(){
+        return new Wall();
+    }
 }

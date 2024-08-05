@@ -35,4 +35,5 @@ public abstract class Tile {
     public char view(){
         return tile;
     }
+    public abstract Tile getCopy();
 }

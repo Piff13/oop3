@@ -75,4 +75,8 @@ public class Monster extends Enemy {
     public String toString() {
         return super.toString() + " ,vision range: " + vision;
     }
+
+    public Enemy getCopy(){
+        return new Monster(this);
+    }
 }
