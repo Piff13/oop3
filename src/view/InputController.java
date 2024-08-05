@@ -66,6 +66,9 @@ public class InputController {
     private Tile createTile(Tile t){
         return t.getCopy();
     }
+    private Enemy createTile(Enemy e){
+        return e.getCopy();
+    }
     public BoardGame CreateBoardFromFile(String filePath, Player player, Generator generator){
         List<Tile> tiles = new LinkedList<>();
         List<Enemy> enemies = new LinkedList<Enemy>();
@@ -85,7 +88,7 @@ public class InputController {
                         currentTile = createTile(mapOfTiles.get(currenctChar));
                         currentTile.initialize(p);
                     } else if(mapOfEnemies.get(currenctChar) != null){
-                        Enemy e = (Enemy)createTile(mapOfEnemies.get(currenctChar));
+                        Enemy e = createTile(mapOfEnemies.get(currenctChar));
                         e.initialize(p, generator);
                         enemies.add(e);
                         currentTile = e;
