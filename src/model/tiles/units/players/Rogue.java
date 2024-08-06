@@ -26,9 +26,10 @@ public class Rogue extends Player{
     protected int attackGain(){
         return (ATTACK_GAIN+BONUS_ATTACK_WARRIOR) * level;
     }
-    public void levelup(){
+    public void levelUp(){
         super.levelUp();
         energy = MAX_ENENERGY;
+        attack += level * 3;
     }
 
 

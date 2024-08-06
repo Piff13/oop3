@@ -48,7 +48,7 @@ public class Mage extends Player{
             while(hits < HITS_COUNT & enemyNum > 0){
                 tryToHitRandomTargets(potentialTargets, spellPower);
                 hits++;
-                enemyNum = getPotentialTargets(ABILITY_RANGE).size();//ask roey
+                enemyNum = potentialTargets.size();
             }
             currentMana -= MANA_COST;
         }
@@ -66,6 +66,8 @@ public class Mage extends Player{
         int generate = rand.nextInt(0, potentialTargets.size());
         Enemy target = potentialTargets.get(generate);
         attackOtherAbility(target, damage);
+        if(!target.alive())
+            potentialTargets.remove(target);
     }
 
     public String toString(){

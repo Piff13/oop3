@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="abstract the code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/view/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/view/InputController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/BoardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/enemies/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722879922517</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="abstract the code">
+      <option name="closed" value="true" />
+      <created>1722884595348</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1722884595348</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

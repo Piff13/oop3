@@ -62,9 +62,12 @@ public class warrior extends  Player {
         attackOtherAbility(target, damage);
     }
 
-    public void levelup(){
+    public void levelUp(){
         super.levelUp();
         reamainingCooldown = 0;
+        health.increaseMax(5 * level);
+        attack += level * 2;
+        defense += level * 1;
     }
 
     public String toString(){

@@ -36,7 +36,7 @@ public class BoardController {
     }
     public void GameStart(){
         Player p = inputController.CreatePlayer();
-        messageCallback.send("you have selected:\n" + p.getName());
+        messageCallback.send("you have selected:\n" + p.getName()+'\n');
         while (index<4 && p.alive()){
             BoardGame board= inputController.CreateBoardFromFile(filePaths[index],p,generator);
             boardHelper.setBoard(board);

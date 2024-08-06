@@ -76,7 +76,7 @@ public class BoardGame {
     }
     public  void chooseAct(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("choose w to move up , s down , a left, d right, e special ability and q nothing");
+        System.out.println("choose w to move up , s down , a left, d right, e special ability and q nothing\n");
         char act= sc.next().charAt(0);
         Position p =player.getPosition();
         int x= p.getX();
