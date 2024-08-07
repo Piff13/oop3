@@ -26,7 +26,7 @@ public class Health {
         return capacity;
     }
     public void gainHealth(int gain){
-        current = Math.max(current + gain, capacity);
+        current = Math.min(current + gain, capacity);
     }
 
     public void increaseMax(int healthGain) {

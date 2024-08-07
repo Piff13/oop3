@@ -7,7 +7,6 @@ import model.utils.callbacks.MessageCallback;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
 
 public class warrior extends  Player {
     protected  final int BONUS_HEALTH_WARRIOR = 5;
@@ -56,8 +55,7 @@ public class warrior extends  Player {
             hitRandomTarget(potentialTargets, health.getCurrent() / 10);
     }
     public void hitRandomTarget(List<Enemy> potentialTargets,int damage){
-        Random rand = new Random();
-        int generate = rand.nextInt(0, potentialTargets.size());
+        int generate = generator.generate(potentialTargets.size());
         Enemy target = potentialTargets.get(generate);
         attackOtherAbility(target, damage);
     }
@@ -65,9 +63,6 @@ public class warrior extends  Player {
     public void levelUp(){
         super.levelUp();
         reamainingCooldown = 0;
-        health.increaseMax(5 * level);
-        attack += level * 2;
-        defense += level * 1;
     }
 
     public String toString(){

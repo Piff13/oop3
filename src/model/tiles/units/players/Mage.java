@@ -6,7 +6,6 @@ import model.utils.BoardHelper;
 import model.utils.callbacks.MessageCallback;
 
 import java.util.List;
-import java.util.Random;
 
 public class Mage extends Player{
     int manaPool;
@@ -48,7 +47,7 @@ public class Mage extends Player{
             while(hits < HITS_COUNT & enemyNum > 0){
                 tryToHitRandomTargets(potentialTargets, spellPower);
                 hits++;
-                enemyNum = potentialTargets.size();
+                enemyNum = potentialTargets.size();//since there is no movement during ability, we can use the same list
             }
             currentMana -= MANA_COST;
         }
@@ -62,8 +61,7 @@ public class Mage extends Player{
 
 
     public void tryToHitRandomTargets(List<Enemy> potentialTargets,int damage){
-        Random rand = new Random();
-        int generate = rand.nextInt(0, potentialTargets.size());
+        int generate = generator.generate(potentialTargets.size());
         Enemy target = potentialTargets.get(generate);
         attackOtherAbility(target, damage);
         if(!target.alive())

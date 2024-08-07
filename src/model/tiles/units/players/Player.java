@@ -10,7 +10,6 @@ import model.utils.callbacks.MessageCallback;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
 
 public abstract class Player extends Unit implements HeroicUnit {
     public static final char PLAYER_TILE = '@';

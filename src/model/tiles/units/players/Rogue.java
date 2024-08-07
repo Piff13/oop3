@@ -7,7 +7,6 @@ import model.utils.callbacks.MessageCallback;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
 
 import static java.lang.System.in;
 
@@ -15,7 +14,7 @@ public class Rogue extends Player{
 
     protected final int cost;
     protected int energy;
-    protected final int BONUS_ATTACK_WARRIOR = 3;
+    protected final int BONUS_ATTACK_ROGUE = 3;
     protected  final  int MAX_ENENERGY =100;
 
     public Rogue(String name, int hitPoints, int attack, int defense, int cost, BoardHelper boardHelper, MessageCallback callback) {
@@ -24,12 +23,11 @@ public class Rogue extends Player{
         this.energy=100;
     }
     protected int attackGain(){
-        return (ATTACK_GAIN+BONUS_ATTACK_WARRIOR) * level;
+        return (ATTACK_GAIN+BONUS_ATTACK_ROGUE) * level;
     }
     public void levelUp(){
         super.levelUp();
         energy = MAX_ENENERGY;
-        attack += level * 3;
     }
 
 

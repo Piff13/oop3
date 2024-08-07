@@ -11,10 +11,20 @@ public class Hunter extends Player{
     public int arrowCount;
     public int ticksCount = 0;
     private int tickForMoreArrows = 10;
+    protected final int DEFENSE_GAIN_HUNTER = 1;
+    protected final int ATTACK_GAIN_HUNTER = 2;
     public Hunter(String name, int hitPoints, int attack, int defense, BoardHelper boardHelper, MessageCallback callback, int range){
         super(name, hitPoints, attack, defense, boardHelper, callback);
         this.range = range;
         this.arrowCount = level * 10;
+    }
+
+    protected int attackGain(){
+        return (ATTACK_GAIN+ATTACK_GAIN_HUNTER) * level;
+    }
+
+    protected int defenseGain(){
+        return (DEFENSE_GAIN+DEFENSE_GAIN_HUNTER) * level;
     }
     public void levelUp(){
         super.levelUp();

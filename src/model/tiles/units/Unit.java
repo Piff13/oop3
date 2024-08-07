@@ -37,7 +37,9 @@ public abstract class Unit extends Tile {
     }
 
     public int attack(){
-        return generator.generate(attack);
+        int damage = generator.generate(attack);
+        callBack.send(this.getName() + " rolled " + damage + " damage points\n");
+        return damage;
     }
     public void attackOther(Unit target, int damage){
         int defense = target.defend();
@@ -67,7 +69,6 @@ public abstract class Unit extends Tile {
         callBack.send(this.toString() + "\n");
         callBack.send((enemy.toString()) + "\n");
         int damage = attack();
-        callBack.send(this.getName() + " rolled  " + damage + " damage points" +'\n');
         attackOther(enemy, damage);
         Position p=enemy.getPosition();
         if(!enemy.alive() & boardHelper.getPlayer().alive()){//don't switch if player died
