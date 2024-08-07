@@ -38,7 +38,7 @@ public class Mage extends Player{
 
     public void SpecialAbility(){
         if(currentMana < MANA_COST){
-            callBack.send("trying to use special ability too soon\n");
+            callBack.send("trying to use special ability too soon: " + currentMana + "/" + MANA_COST+"\n");
         }  else {
             callBack.send(this.getName() + " used Blizzard\n");
             int hits = 0;

@@ -6,21 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="fix logical errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/control/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/control/BoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/control/BoardGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/control/BoardGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Monster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Monster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Hunter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Hunter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Mage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Rogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Rogue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/warrior.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Hunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/utils/Health.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/utils/Health.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/players/warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/utils/Health.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/utils/Health.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722955787721</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix logical errors">
+      <option name="closed" value="true" />
+      <created>1723068152351</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723068152351</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

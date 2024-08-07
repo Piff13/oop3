@@ -34,7 +34,7 @@ public class Rogue extends Player{
     @Override
     public void SpecialAbility() {
         if(energy-cost < 0){
-            callBack.send("trying to use special ability too soon\n");
+            callBack.send("trying to use special ability too soon: " + energy + '/' + cost +'\n');
         } else {
             callBack.send(this.getName() + " used Fan of Knives\n");
             energy -= cost;

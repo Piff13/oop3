@@ -33,7 +33,7 @@ public class warrior extends  Player {
     @Override
     public void SpecialAbility() {
         if(reamainingCooldown > 0){
-            callBack.send("trying to use special ability too soon\n");
+            callBack.send("trying to use special ability too soon : wait for " + reamainingCooldown + " rounds\n");
         } else {
             callBack.send(this.getName() + " used Avenger's shield, healing for " + defense * 10 + "\n");
             health.gainHealth(defense * 10);
