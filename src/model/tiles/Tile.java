@@ -36,4 +36,7 @@ public abstract class Tile {
         return tile;
     }
     public abstract Tile getCopy();
+    public  char getTile(){
+        return tile;
+    }
 }

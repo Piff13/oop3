@@ -5,27 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="fix logical errors">
-      <change afterPath="$PROJECT_DIR$/src/model/tiles/TileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oop3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/oop3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/control/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/control/BoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/Empty.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/Empty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/Wall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/Wall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Characters.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Characters.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Trap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Trap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Hunter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Hunter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Mage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Rogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Rogue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/warrior.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/utils/Health.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/utils/Health.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/units/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/utils/BoardHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/utils/BoardHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/Ui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/Ui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/Ui/BoardView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/Ui/BoardView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/control/BoardGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/control/BoardGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/HeroicUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/HeroicUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Boss.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Boss.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Monster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Monster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/utils/BoardHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/utils/BoardHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/utils/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/utils/Position.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/utils/callbacks/MessageCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/utils/callbacks/MessageCallback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/utils/generators/FixedGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/utils/generators/FixedGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/utils/generators/Generator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/utils/generators/Generator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/utils/generators/RandomGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/utils/generators/RandomGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/view/CLI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/view/CLI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/view/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/view/InputController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oop3/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/view/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/tiles/TileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/TileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +69,11 @@
     "JUnit.TileTest.TileTestEnemeisAndPlayer.executor": "Run",
     "JUnit.TileTest.TileTestEnemeisAndPlayer1.executor": "Run",
     "JUnit.TileTest.TileTestEnemeisAndPlayer2.executor": "Run",
+    "JUnit.TileTest.TileTestEnemeisAndPlayer4.executor": "Run",
+    "JUnit.TileTest.TileTestEnemeisAndPlayer5.executor": "Run",
+    "JUnit.TileTest.TileTestEnemeisAndPlayer6.executor": "Run",
+    "JUnit.TileTest.TileTestEnemeisAndPlayer7.executor": "Run",
+    "JUnit.TileTest.TileTestEnemeisAndPlayer8.executor": "Run",
     "JUnit.TileTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -101,7 +104,7 @@
       <recent name="model.tiles" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TileTest.TileTestEnemeisAndPlayer5">
+  <component name="RunManager" selected="JUnit.TileTest.TileTestEnemeisAndPlayer8">
     <configuration name="TileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop3" />
       <extension name="coverage">
@@ -113,54 +116,6 @@
       <option name="PACKAGE_NAME" value="model.tiles" />
       <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TileTest.TileTestEnemeisAndPlayer1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oop3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.tiles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model.tiles" />
-      <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
-      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TileTest.TileTestEnemeisAndPlayer2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oop3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.tiles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model.tiles" />
-      <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
-      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TileTest.TileTestEnemeisAndPlayer4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oop3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.tiles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model.tiles" />
-      <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
-      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer4" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,13 +136,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TileTest.TileTestEnemeisAndPlayer6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.tiles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model.tiles" />
+      <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
+      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer6" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TileTest.TileTestEnemeisAndPlayer7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.tiles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model.tiles" />
+      <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
+      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer7" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TileTest.TileTestEnemeisAndPlayer8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.tiles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model.tiles" />
+      <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
+      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer8" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer5" />
-        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer4" />
+        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer8" />
+        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer7" />
+        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer6" />
         <item itemvalue="JUnit.TileTest" />
-        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer2" />
-        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer1" />
+        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer5" />
       </list>
     </recent_temporary>
   </component>
@@ -312,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723068152351</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix logical errors">
+      <option name="closed" value="true" />
+      <created>1723189295793</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1723189295793</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
