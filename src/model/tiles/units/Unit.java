@@ -113,4 +113,7 @@ public abstract class Unit extends Tile {
     public Tile getCopy(){
         return null;
     }
+    public  int getHealth(){
+        return health.getCurrent();
+    }
 }
