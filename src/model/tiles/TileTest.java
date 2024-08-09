@@ -215,6 +215,24 @@ public class TileTest {
             e.get(0).move(1,1);
         }
         Assert.assertEquals(p.getTile(),'X');
-
+    }
+    @Test
+    public void TileTestEnemeisAndPlayer9() {
+        View view = new CLI();
+        Generator generator = new RandomGenerator();
+        MessageCallback messageCallback = view.getCallback();
+        BoardGame board = new BoardGame();
+        BoardHelper boardHelper = new BoardHelper(board);
+        InputController inputController = new InputController(messageCallback, boardHelper);
+        Position pos1 =new Position(1,1);
+        Position pos2 =new Position(1,2);
+        Player p=inputController.CreatePlayer(1);
+        BoardGame empty=inputController.createBoardEnemy(p,pos1,pos2,generator);
+        inputController.setboard(empty);
+        List<Enemy> e=empty.getEnemies();
+        for(int i=0 ;i<1000;i++){
+            p.move(1,2);
+        }
+        Assert.assertEquals(empty.getEnemies().isEmpty(),true);
     }
 }

@@ -104,7 +104,7 @@
       <recent name="model.tiles" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TileTest.TileTestEnemeisAndPlayer8">
+  <component name="RunManager" selected="JUnit.TileTest.TileTestEnemeisAndPlayer9">
     <configuration name="TileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop3" />
       <extension name="coverage">
@@ -116,22 +116,6 @@
       <option name="PACKAGE_NAME" value="model.tiles" />
       <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TileTest.TileTestEnemeisAndPlayer5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oop3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.tiles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model.tiles" />
-      <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
-      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer5" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -184,13 +168,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TileTest.TileTestEnemeisAndPlayer9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.tiles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model.tiles" />
+      <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
+      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer9" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer9" />
         <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer8" />
         <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer7" />
         <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer6" />
         <item itemvalue="JUnit.TileTest" />
-        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer5" />
       </list>
     </recent_temporary>
   </component>
