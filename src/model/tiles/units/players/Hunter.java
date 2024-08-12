@@ -7,9 +7,9 @@ import model.utils.callbacks.MessageCallback;
 import java.util.List;
 
 public class Hunter extends Player{
-    public int range;
-    public int arrowCount;
-    public int ticksCount = 0;
+    protected int range;
+    protected int arrowCount;
+    protected int ticksCount = 0;
     private int tickForMoreArrows = 10;
     protected final int DEFENSE_GAIN_HUNTER = 1;
     protected final int ATTACK_GAIN_HUNTER = 2;

@@ -8,12 +8,12 @@ import model.utils.callbacks.MessageCallback;
 import java.util.List;
 
 public class Mage extends Player{
-    int manaPool;
-    final int MANA_COST;
-    int currentMana;
-    int spellPower;
-    final int HITS_COUNT;
-    final int ABILITY_RANGE;
+    protected int manaPool;
+    protected final int MANA_COST;
+    protected int currentMana;
+    protected int spellPower;
+    protected final int HITS_COUNT;
+    protected final int ABILITY_RANGE;
     public Mage(String name, int hitPoints, int attack, int defense, int manaPool, int manaCost, int spellPower, int hitsCount, int range, BoardHelper boardHelper, MessageCallback callback){
         super(name, hitPoints, attack, defense, boardHelper, callback);
         this.manaPool = manaPool;

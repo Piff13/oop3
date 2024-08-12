@@ -18,11 +18,6 @@ public abstract class Enemy extends Unit {
         this.experienceValue = experienceValue;
     }
 
-    public int experienceValue() {
-        return experienceValue;
-    }
-
-
     @Override
     public void accept(Unit unit) {
         unit.visit(this);

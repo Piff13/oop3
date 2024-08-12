@@ -58,11 +58,10 @@ public abstract class Unit extends Tile {
         return health.getCurrent() > 0;
     }
 
-    public int takeDamage(int damage, Unit dealer){
-        int life=health.takeDamage(damage);
+    public void takeDamage(int damage, Unit dealer){
+        health.takeDamage(damage);
         if(!alive())
             dealer.kill(this);
-        return life;
     }
     public void combatBattle(Unit enemy) {
         callBack.send(this.getName() + " engaged in melee combat with " + enemy.getName() + "\n");
@@ -91,9 +90,6 @@ public abstract class Unit extends Tile {
 
     public abstract void visit(Player p);
     public abstract void visit(Enemy e);
-    public void onDeath(Unit uni){
-        return;
-    }
 
     public abstract void onDeath(Player p);
     public abstract void onDeath(Enemy e);

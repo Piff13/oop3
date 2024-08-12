@@ -4,7 +4,7 @@ import model.tiles.units.Unit;
 import model.utils.Position;
 
 public abstract class Tile {
-    public char tile;
+    protected char tile;
     protected Position position;
 
     public Tile(char tile){
