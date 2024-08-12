@@ -8,6 +8,7 @@ public class Empty extends Tile {
     public Empty() {
         super(EMPTY_TILE);
     }
+
     @Override
     public void accept(Unit unit) {
         unit.visit(this);
