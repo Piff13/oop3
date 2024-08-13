@@ -192,6 +192,49 @@ public class InputController {
         enemies.add(e);
         return new BoardGame(tiles, enemies, messageCallback, 100,100, player);
     }
+    public BoardGame createBoardEnemyWall1(Player player,Position p , Position p1,Generator g,Position p2){
+        List<Tile> tiles = new LinkedList<>();
+        List<Enemy> enemies = new LinkedList<Enemy>();
+        Enemy e= mapOfEnemies.get('s');
+        e.initialize(p1,g);
+        Tile e1= mapOfTiles.get('#');
+        e1.initialize(p2);
+        player.initialize(p,g);
+        tiles.add(e);
+        tiles.add(e1);
+        tiles.add(player);
+        enemies.add(e);
+        return new BoardGame(tiles, enemies, messageCallback, 100,100, player);
+    }
+    public BoardGame createBoardEnemyEnemy(Player player,Position p , Position p1,Generator g,Position p2,Position p3){
+        List<Tile> tiles = new LinkedList<>();
+        List<Enemy> enemies = new LinkedList<Enemy>();
+        Enemy e= mapOfEnemies.get('s');
+        e.initialize(p1,g);
+        Enemy e11= mapOfEnemies.get('s');
+        e11.initialize(p3,g);
+        Tile e1= mapOfTiles.get('#');
+        e1.initialize(p2);
+        player.initialize(p,g);
+        tiles.add(e);
+        tiles.add(e11);
+        tiles.add(e1);
+        tiles.add(player);
+        enemies.add(e);
+        enemies.add(e11);
+        return new BoardGame(tiles, enemies, messageCallback, 100,100, player);
+    }
+    public BoardGame createBoardEnemyTrap(Player player,Position p , Position p1,Generator g){
+        List<Tile> tiles = new LinkedList<>();
+        List<Enemy> enemies = new LinkedList<Enemy>();
+        Enemy e= mapOfEnemies.get('Q');
+        e.initialize(p1,g);
+        player.initialize(p,g);
+        tiles.add(e);
+        tiles.add(player);
+        enemies.add(e);
+        return new BoardGame(tiles, enemies, messageCallback, 100,100, player);
+    }
     public  void setboard(BoardGame board){
         boardHelper.setBoard(board);
     }
