@@ -288,5 +288,99 @@ public class TileTest {
         e.get(0).move(1,4);
         Assert.assertEquals(empty.getEnemies().get(0).getPosition().getY(),4);
     }
+    @Test
+    public void TileTestEnemeisAndPlayer12() {
+        View view = new CLI();
+        Generator generator = new RandomGenerator();
+        MessageCallback messageCallback = view.getCallback();
+        BoardGame board = new BoardGame();
+        BoardHelper boardHelper = new BoardHelper(board);
+        InputController inputController = new InputController(messageCallback, boardHelper);
+        Position pos1 =new Position(1,1);
+        Position pos2 =new Position(1,2);
+        Player p=inputController.CreatePlayer(1);
+        BoardGame empty=inputController.createBoardEnemyTrap(p,pos1,pos2,generator);
+        inputController.setboard(empty);
+        List<Enemy> e=empty.getEnemies();
+        for(int i=0 ;i<1000;i++){
+            e.get(0).OnTick();
+        }
+        Assert.assertEquals(p.getTile(),'X');
+    }
+    @Test
+    public void TileTestEnemeisAndPlayer13() {
+        View view = new CLI();
+        Generator generator = new RandomGenerator();
+        MessageCallback messageCallback = view.getCallback();
+        BoardGame board = new BoardGame();
+        BoardHelper boardHelper = new BoardHelper(board);
+        InputController inputController = new InputController(messageCallback, boardHelper);
+        Position pos1 =new Position(1,1);
+        Position pos2 =new Position(1,2);
+        Player p=inputController.CreatePlayer(1);
+        BoardGame empty=inputController.createBoardEnemyTrap(p,pos1,pos2,generator);
+        inputController.setboard(empty);
+        List<Enemy> e=empty.getEnemies();
+        for(int i=0 ;i<1000;i++){
+            p.move(1,2);
+        }
+        Assert.assertEquals(empty.getEnemies().isEmpty(),true);
+    }
+    @Test
+    public void TileTestEnemeisAndPlayer14() {
+        View view = new CLI();
+        Generator generator = new RandomGenerator();
+        MessageCallback messageCallback = view.getCallback();
+        BoardGame board = new BoardGame();
+        BoardHelper boardHelper = new BoardHelper(board);
+        InputController inputController = new InputController(messageCallback, boardHelper);
+        Position pos1 =new Position(1,1);
+        Position pos2 =new Position(1,2);
+        Position pos3 =new Position(1,3);
 
+        Player p=inputController.CreatePlayer(1);
+        BoardGame empty=inputController.createBoardEnemyTrapMonster(p,pos1,pos2,generator,pos3);
+        inputController.setboard(empty);
+        List<Enemy> e=empty.getEnemies();
+        e.get(1).move(1,2);
+        Assert.assertEquals(e.get(1).getPosition().getY(),3);
+    }
+    @Test
+    public void TileTestEnemeisAndPlayer15() {
+        View view = new CLI();
+        Generator generator = new RandomGenerator();
+        MessageCallback messageCallback = view.getCallback();
+        BoardGame board = new BoardGame();
+        BoardHelper boardHelper = new BoardHelper(board);
+        InputController inputController = new InputController(messageCallback, boardHelper);
+        Position pos1 =new Position(1,1);
+        Position pos2 =new Position(1,2);
+        Player p=inputController.CreatePlayer(1);
+        BoardGame empty=inputController.createBoardEnemyTrap(p,pos1,pos2,generator);
+        inputController.setboard(empty);
+        List<Enemy> e=empty.getEnemies();
+
+        e.get(0).OnTick();
+
+        Assert.assertEquals(p.getHealth()<=300,true);
+    }
+    @Test
+    public void TileTestEnemeisAndPlayer16() {
+        View view = new CLI();
+        Generator generator = new RandomGenerator();
+        MessageCallback messageCallback = view.getCallback();
+        BoardGame board = new BoardGame();
+        BoardHelper boardHelper = new BoardHelper(board);
+        InputController inputController = new InputController(messageCallback, boardHelper);
+        Position pos1 =new Position(1,1);
+        Position pos2 =new Position(1,2);
+        Player p=inputController.CreatePlayer(1);
+        BoardGame empty=inputController.createBoardEnemyTrap(p,pos1,pos2,generator);
+        inputController.setboard(empty);
+        List<Enemy> e=empty.getEnemies();
+
+        p.move(1,2);
+
+        Assert.assertEquals(e.get(0).getHealth()<=250,true);
+    }
 }

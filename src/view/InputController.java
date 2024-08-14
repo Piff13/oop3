@@ -235,6 +235,21 @@ public class InputController {
         enemies.add(e);
         return new BoardGame(tiles, enemies, messageCallback, 100,100, player);
     }
+    public BoardGame createBoardEnemyTrapMonster(Player player,Position p , Position p1,Generator g,Position p2){
+        List<Tile> tiles = new LinkedList<>();
+        List<Enemy> enemies = new LinkedList<Enemy>();
+        Enemy e= mapOfEnemies.get('Q');
+        Enemy e1= mapOfEnemies.get('s');
+        e.initialize(p1,g);
+        e1.initialize(p2,g);
+        player.initialize(p,g);
+        tiles.add(e);
+        tiles.add(e1);
+        tiles.add(player);
+        enemies.add(e);
+        enemies.add(e1);
+        return new BoardGame(tiles, enemies, messageCallback, 100,100, player);
+    }
     public  void setboard(BoardGame board){
         boardHelper.setBoard(board);
     }

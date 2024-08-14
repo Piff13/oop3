@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c0c5134-d21b-404c-86fd-4b9a6c8ae6e4" name="Changes" comment="add semantics">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/Empty.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/Empty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/Wall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/Wall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/Unit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Boss.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Boss.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Trap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/enemies/Trap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Hunter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Hunter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Mage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/model/tiles/units/players/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/oop3/view/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oop3/view/InputController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/tiles/TileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/tiles/TileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InputController.java" afterDir="false" />
     </list>
@@ -64,6 +52,9 @@
     "JUnit.TileTest.TileTestEnemeisAndPlayer.executor": "Run",
     "JUnit.TileTest.TileTestEnemeisAndPlayer10.executor": "Run",
     "JUnit.TileTest.TileTestEnemeisAndPlayer11.executor": "Run",
+    "JUnit.TileTest.TileTestEnemeisAndPlayer12.executor": "Run",
+    "JUnit.TileTest.TileTestEnemeisAndPlayer13.executor": "Run",
+    "JUnit.TileTest.TileTestEnemeisAndPlayer14.executor": "Run",
     "JUnit.TileTest.TileTestEnemeisAndTrap.executor": "Run",
     "JUnit.TileTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -82,7 +73,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.TileTest.TileTestEnemeisAndTrap">
+  <component name="RunManager" selected="JUnit.TileTest">
     <configuration name="TileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop3" />
       <extension name="coverage">
@@ -98,7 +89,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TileTest.TileTestEnemeisAndMonster" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TileTest.TileTestEnemeisAndPlayer12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop3" />
       <extension name="coverage">
         <pattern>
@@ -108,13 +99,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="model.tiles" />
       <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
-      <option name="METHOD_NAME" value="TileTestEnemeisAndMonster" />
+      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer12" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TileTest.TileTestEnemeisAndPlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TileTest.TileTestEnemeisAndPlayer13" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop3" />
       <extension name="coverage">
         <pattern>
@@ -124,13 +115,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="model.tiles" />
       <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
-      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer" />
+      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer13" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TileTest.TileTestEnemeisAndPlayer11" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TileTest.TileTestEnemeisAndPlayer14" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop3" />
       <extension name="coverage">
         <pattern>
@@ -140,13 +131,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="model.tiles" />
       <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
-      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer11" />
+      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer14" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TileTest.TileTestEnemeisAndTrap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TileTest.TileTestEnemeisAndPlayer15" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop3" />
       <extension name="coverage">
         <pattern>
@@ -156,7 +147,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="model.tiles" />
       <option name="MAIN_CLASS_NAME" value="model.tiles.TileTest" />
-      <option name="METHOD_NAME" value="TileTestEnemeisAndTrap" />
+      <option name="METHOD_NAME" value="TileTestEnemeisAndPlayer15" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,18 +155,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndTrap" />
         <item itemvalue="JUnit.TileTest" />
-        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndMonster" />
-        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer11" />
-        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer" />
+        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer15" />
+        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer14" />
+        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer13" />
+        <item itemvalue="JUnit.TileTest.TileTestEnemeisAndPlayer12" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -188,6 +180,8 @@
       <option name="presentableId" value="Default" />
       <updated>1720619637585</updated>
       <workItem from="1720640622105" duration="2539000" />
+      <workItem from="1723634596851" duration="27000" />
+      <workItem from="1723634631970" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="generalize functions, add trap and mage">
       <option name="closed" value="true" />
